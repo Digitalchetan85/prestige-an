@@ -8,7 +8,7 @@ import Image2 from "../../images/slider/the-great-acres/the-great-acres-2.png";
 import Image3 from "../../images/slider/the-great-acres/the-great-acres-3.png";
 import Image4 from "../../images/slider/the-great-acres/the-great-acres-4.png";
 import Logo from "../../images/projects/the-great-acres-@-the-prestige-city-logo.png"
-import Modals from "../Includes/Modals";
+import GreatModal from "./GreatModal";
 
 
 const GreatAcresSlider = () => {
@@ -100,7 +100,7 @@ const GreatAcresSlider = () => {
             <Row className="">
               <Col md={8} className="">
                 <div className="m-1 text-center text-md-start">
-                  <h4>The Great Acres @ The Prestige City</h4>
+                  <h1 className="fs-3 text-primary">The Great Acres @ Prestige City</h1>
                   <p className="m-0">
                     {" "}
                     <p className="text-center text-md-start mb-0">Sarjapur Main Road, Bangalore</p>
@@ -125,7 +125,7 @@ const GreatAcresSlider = () => {
       </Container>
     </div>
 
-    <Modals
+    <GreatModal
       show={show}
       handleClose={handleClose}
       title="Download Brouchure"

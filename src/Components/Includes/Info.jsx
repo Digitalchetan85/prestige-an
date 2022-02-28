@@ -16,7 +16,7 @@ const Info = () => {
         <Row className="border-start border-5 bg-white shadow border-dark p-2">
           <Col md={9}>
             <h2>Need more information?</h2>
-            <p class="m-0">
+            <p className="m-0">
               Don't hesitate to download the brochure to know more details of
               this project.
             </p>

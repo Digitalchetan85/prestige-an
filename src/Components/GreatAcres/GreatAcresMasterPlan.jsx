@@ -9,8 +9,8 @@ const GreatAcresMasterPlan= () => {
   return (
     <div>
     <div id="master-plan" className="pt-3 pb-3 pt-md-5 pb-md-5">
-      <h2 className="pt-2 pb-2 text-center text-primary">
-        Master Plan & Floor Plans
+      <h2 className="pt-2 pb-2 text-center text-primary fs-3">
+        Great Acres Master & Floor Plans
       </h2>
       <Container fluid className="ps-0 pe-0">
         <Row>

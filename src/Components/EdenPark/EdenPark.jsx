@@ -4,14 +4,29 @@ import About from '../Includes/AboutDeveloper'
 import Contact from '../Includes/Contact'
 import FixedIcons from '../Includes/FixedIcons'
 import Info from '../Includes/Info'
+import VirtualTour from '../Includes/VirtualTour'
 import EdenMasterPlan from './EdenMasterPlan'
 import EdenPrice from './EdenPrice'
 import EdenSlider from './EdenSlider'
 import OtherProjectsEden from './OtherProjectsEden'
+import {Helmet} from 'react-helmet'
 
 const EdenPark = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Eden Park | Prestige City | 1BHK | 2BHK Apartments</title>
+        <link rel="canonical" href="https://theprestigecitysarjapur.com/projects/eden-park" />
+        <meta
+          name="description"
+          content="Prestige City Eden Park is one of the blocks of the 2217 units in 9.7 acres of land. This township consists of 1BHK and 2BHK Apartments."
+          name="Robots" content="INDEX,FOLLOW"
+          name="allow-search" content="yes"
+          name="search engines" content="ALL"
+          name="expires" content="Never"
+        />
+      </Helmet>
       <EdenSlider />
       <Container fluid>
         <Row>
@@ -20,7 +35,7 @@ const EdenPark = () => {
               <Container fluid className="ps-0 pe-0">
                 <Row>
                   <Col md={12}>
-                    <h2 className="pb-2 text-center text-primary py-2 py-md-5">
+                    <h2 className="pb-2 text-center text-primary py-2 py-md-5 fs-3">
                       Project Highlights
                     </h2>
                     <span className="bg-danger position-absolute start-50 span-line"></span>
@@ -52,7 +67,7 @@ const EdenPark = () => {
               <Container fluid className="ps-0 pe-0">
                 <Row>
                   <Col md={12}>
-                    <h2 className="py-2 text-center text-primary">
+                    <h2 className="py-2 text-center text-primary fs-3">
                       About Eden Park @ Prestige City
                     </h2>
                     <p>
@@ -83,8 +98,8 @@ const EdenPark = () => {
             <div className="py-3 py-md-5" id="amenites">
               <Container fluid className="ps-0 pe-0">
                 <Row className="justify-content-center">
-                  <h2 className="text-center text-primary py-md-3 py-2">
-                    Amenities
+                  <h2 className="text-center text-primary py-md-3 py-2 fs-3">
+                    Prestige City - Amenities
                   </h2>
                   <Col md={3} xs={6}>
                     <ul>
@@ -114,6 +129,7 @@ const EdenPark = () => {
                 <Row>
                   <EdenPrice />
                   <Info />
+                  <VirtualTour />
                 </Row>
               </Container>
             </div>

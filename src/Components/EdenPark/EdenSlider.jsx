@@ -6,7 +6,7 @@ import "react-owl-carousel2/src/owl.theme.default.css";
 import Image1 from "../../images/slider/eden-park/eden-park-1.png";
 import Image2 from "../../images/slider/eden-park/eden-park-2.png";
 import Logo from "../../images/projects/eden-park-@-the-prestige-city-logo.png"
-import Modals from "../Includes/Modals";
+import EdenModal from "./EdenModal";
 
 
 const EdenSlider = () => {
@@ -88,7 +88,7 @@ const EdenSlider = () => {
             <Row className="">
               <Col md={8} className="">
                 <div className="m-1 text-center text-md-start">
-                  <h4>Eden Park @ The Prestige City</h4>
+                  <h1 className="fs-4 text-primary">Eden Park @ The Prestige City</h1>
                   <p className="m-0">
                     {" "}
                     <p className="text-center text-md-start mb-0">Sarjapur Main Road, Bangalore</p>
@@ -113,7 +113,7 @@ const EdenSlider = () => {
       </Container>
     </div>
 
-    <Modals
+    <EdenModal
       show={show}
       handleClose={handleClose}
       title="Download Brouchure"

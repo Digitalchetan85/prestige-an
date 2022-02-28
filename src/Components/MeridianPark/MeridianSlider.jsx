@@ -8,7 +8,7 @@ import Image2 from "../../images/slider/meridian/image-2.png";
 import Image3 from "../../images/slider/meridian/image-3.png";
 import Image4 from "../../images/slider/meridian/image-4.png";
 import Logo from "../../images/projects/meridian-park-@-the-prestige-city-logo.png";
-import Modals from "../Includes/Modals";
+import MeridianModal from "./MeridianModal";
 
 const MeridianSlider = () => {
   const [show, setShow] = useState(false);
@@ -97,7 +97,7 @@ const MeridianSlider = () => {
               <Row className="">
                 <Col md={8} className="">
                   <div className="m-1 text-center text-md-start">
-                    <h4>Meridian Park @ The Prestige City</h4>
+                    <h1 className="text-primary fs-4">Meridian Park @ The Prestige City</h1>
                     <p className="m-0 fw-bold text-center text-md-start">
                       <p className=" text-center text-md-start mb-0">Sarjapur Main Road, Bangalore</p>
                       <p className=" text-center text-md-start mb-0">87L* Onwards </p>
@@ -121,7 +121,7 @@ const MeridianSlider = () => {
         </Container>
       </div>
 
-      <Modals
+      <MeridianModal
         show={show}
         handleClose={handleClose}
         title="Download Brouchure"

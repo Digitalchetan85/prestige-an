@@ -4,14 +4,34 @@ import About from "../Includes/AboutDeveloper";
 import Contact from "../Includes/Contact";
 import FixedIcons from "../Includes/FixedIcons";
 import Info from "../Includes/Info";
+import VirtualTour from "../Includes/VirtualTour";
 import MeridianMasterPlan from "./MeridianMasterPlan";
 import MeridianPrice from "./MeridianPrice";
 import MeridianSlider from "./MeridianSlider";
 import OtherProjectsMeridian from "./OtherProjectsMeridian";
+import { Helmet } from "react-helmet";
 
 const MeridianPark = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          Meridian park | Prestige City | Villas | Plots | Apartments{" "}
+        </title>
+        <link
+          rel="canonical"
+          href="https://theprestigecitysarjapur.com/projects/meridian-park"
+        />
+        <meta
+          name="description"
+          content="Meridian Park is a spacious high-rise homes located within the upcoming Prestige City township, which comprises Villa, Plots & Apartments, villas."
+          name="Robots" content="INDEX,FOLLOW"
+          name="allow-search" content="yes"
+          name="search engines" content="ALL"
+          name="expires" content="Never"
+        />
+      </Helmet>
       <MeridianSlider />
       <Container fluid>
         <Row>
@@ -20,7 +40,7 @@ const MeridianPark = () => {
               <Container fluid className="ps-0 pe-0">
                 <Row>
                   <Col md={12}>
-                    <h2 className="pb-2 text-center text-primary py-2 py-md-5">
+                    <h2 className="pb-2 text-center text-primary py-2 py-md-5 fs-3">
                       Project Highlights
                     </h2>
                     <span className="bg-danger position-absolute start-50 span-line"></span>
@@ -56,11 +76,11 @@ const MeridianPark = () => {
               <Container fluid className="ps-0 pe-0">
                 <Row>
                   <Col md={12}>
-                    <h2 className="py-2 text-center text-primary">
-                      About The Meridian Park @ Prestige City
+                    <h2 className="py-2 text-center text-primary fs-3">
+                      Prestige Smart City - Meridian Park
                     </h2>
                     <p>
-                      Meridian Park is a community of spacious and well-planned
+                      <a href="/projects/meridian-park" className="fw-bold text-decoration-none">Prestige City Meridian Park</a> is a community of spacious and well-planned
                       high-rise homes located within the upcoming ‘The Prestige
                       City’ township, which comprises villa plots, apartments,
                       villas and a proposed Forum retail mall.
@@ -94,8 +114,8 @@ const MeridianPark = () => {
             <div className="py-3 py-md-5" id="amenites">
               <Container fluid className="ps-0 pe-0">
                 <Row>
-                  <h2 className="text-center text-primary py-md-3">
-                    Amenities
+                  <h2 className="text-center text-primary py-md-3 py-2 fs-3">
+                    Meridian Park - Amenities
                   </h2>
                   <Col md={4} xs={6}>
                     <ul>
@@ -135,6 +155,7 @@ const MeridianPark = () => {
                 <Row>
                   <MeridianPrice />
                   <Info />
+                  <VirtualTour />
                 </Row>
               </Container>
             </div>

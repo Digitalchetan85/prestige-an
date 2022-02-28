@@ -18,36 +18,36 @@ import image5 from "../../images/slider/the-great-acres/the-great-acres-1.png"
 const Projects = () => {
   const projects = [{ 
     id: 1, 
-    title: "Meridian Park",
+    title: "Prestige City Meridian Park",
     description: "3 Bed Appartments",
     imageurl: image1,
     link: "/projects/meridian-park",
-    status:"Coming Soon"
+    status:"New Launch"
 
 },
 { id: 2, 
-    title: "Eden Park",
+    title: "Prestige City Eden Park",
     description: "1/2 Bed Appartments",
     imageurl: image2,
     link: "/projects/eden-park",
     status:"New Launch"
 },
 { id: 3, 
-    title: "Avalon Park",
+    title: "Prestige City Avalon Park",
     description: "3/4 BHK Appartments",
     imageurl: image3,
     link: "/projects/avalon-park",
     status:"Sold Out"
 },
 { id: 4, 
-    title: "Aspen Greens",
+    title: "Prestige City Aspen Greens",
     description: "4BHK Villas ",
     imageurl: image4,
     link: "/projects/aspen-greens",
     status:"New Launch"
 },
 { id: 5, 
-    title: "The Great Acres",
+    title: "Prestige City The Great Acres",
     description: "Plots",
     imageurl: image5,
     link: "/projects/great-acres",
@@ -60,15 +60,15 @@ const Projects = () => {
     <div className="bg-light py-3 py-md-5" id="projects">
       <Container fluid className="ps-0 pe-0">
         <Row className="justify-content-center g-3">
-            <h2 className="py-3 text-primary text-center">Prestige City Projects</h2> 
+            <h2 className="py-3 text-primary text-center fs-3">Prestige City Projects</h2> 
           {projects.map((project) => (
             <Col md={6} key={project.id}>
               <Card>
                 <Card.Img variant="top" src={project.imageurl} className="position-relative" />
-                  <h6 class="position-absolute end-0 bg-danger m-3 rounded-pill text-white p-2 pill-custom">{project.status}</h6>
+                  <h6 className="position-absolute end-0 bg-danger m-3 rounded-pill text-white p-2 pill-custom">{project.status}</h6>
                 <Card.Body className="text-center">
-                  <Card.Title>{project.title}</Card.Title>
-                  <h4 className="">{project.description}</h4>
+                  <h2 className="fs-4">{project.title}</h2>
+                  <h3 className="fs-5">{project.description}</h3>
                   <div className="text-center">
                   <Button
                     variant="primary"

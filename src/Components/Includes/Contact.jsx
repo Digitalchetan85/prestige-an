@@ -27,26 +27,34 @@ const Contact = () => {
   });
 
   const onSubmit = (values) => {
-    const data = values;
+    // const data = "";
 
-    console.log(data);
+    let data = {
+      apikey: "897ec314-c85b-4291-96ee-48648d5dcfbd",
+      firstname: values.name,
+      lastname: "",
+      source: "Prestige City",
+      mobile: values.phone,
+      CreatedDate: "17/02/2022",
+      email: values.email,
+      Remark: "Brochure Downloaded",
+      ProjectUID: "2597B322-F920-442A-9050-127AFD565726",
+    }
+
+    // console.log(data);
 
     axios
-      .get(
-        "email.php?sendto=" +
-          data.email +
-          "&name=" +
-          data.name +
-          "&phone=" +
-          data.phone
+      .post("https://buildeskapi.azurewebsites.net/api/Webhook", data
       )
       .then(function (response) {
-        console.log(response);
-        setformStatus(response.data);
+        if (response.data.Success) {
+          setformStatus("Thanks for contacting us. We will get back to you soon.");
+        } else {
+          setformStatus("Sorry!!! Something went wrong. Please try again")
+        }
       })
       .catch(function (error) {
-        console.log(error);
-        setformStatus(error.data);
+        setformStatus("Sorry!!! Something went wrong. Please try again")
       });
   };
   return (

@@ -10,7 +10,7 @@ const OtherProjectsMeridian = () => {
   const projects = [
     {
       id: 2,
-      title: "Eden Park",
+      title: "Prestige City Eden Park",
       description: "1/2 Bed Appartments",
       imageurl: image2,
       link: "/projects/eden-park",
@@ -18,7 +18,7 @@ const OtherProjectsMeridian = () => {
     },
     {
       id: 3,
-      title: "Avalon Park",
+      title: "Prestige City Avalon Park",
       description: "3/4 BHK Appartments",
       imageurl: image3,
       link: "/projects/avalon-park",
@@ -34,7 +34,7 @@ const OtherProjectsMeridian = () => {
     },
     {
       id: 5,
-      title: "The Great Acres",
+      title: "Prestige City The Great Acres",
       description: "Plots",
       imageurl: image5,
       link: "/projects/great-acres",
@@ -45,7 +45,7 @@ const OtherProjectsMeridian = () => {
     <div className="bg-light py-3 py-md-5" id="projects">
       <Container fluid>
         <Row className="justify-content-center g-3">
-          <h2 className="py-3 text-primary text-center">
+          <h2 className="py-3 text-primary text-center fs-3">
             Prestige City Projects
           </h2>
           {projects.map((project) => (
@@ -56,12 +56,12 @@ const OtherProjectsMeridian = () => {
                   src={project.imageurl}
                   className="position-relative"
                 />
-                <h6 class="position-absolute end-0 bg-danger m-3 rounded-pill text-white p-2 pill-custom">
+                <h6 className="position-absolute end-0 bg-danger m-3 rounded-pill text-white p-2 pill-custom">
                   {project.status}
                 </h6>
                 <Card.Body className="text-center">
-                  <Card.Title>{project.title}</Card.Title>
-                  <h4 className="">{project.description}</h4>
+                  <h3 className="fs-5">{project.title}</h3>
+                  <h4 className="fs-6">{project.description}</h4>
                   <div className="text-center">
                     <Button
                       variant="primary"

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Row, Table } from "react-bootstrap";
-import Modals from "../Includes/Modals";
+import AspenModals from "./AspenModal";
 
 const AspenPrice = () => {
   const [show, setShow] = useState(false);
@@ -11,7 +11,7 @@ const AspenPrice = () => {
       <Row className="justify-content-center">
         <Col md={10} xs={12}>
           <div className="">
-            <h2 className="text-primary text-center py-3">Pricing</h2>
+            <h2 className="text-primary text-center py-3 fs-3">Avalon Park Pricing</h2>
             <Table
               responsive="sm"
               className="align-middle text-center border-transparent"
@@ -47,7 +47,7 @@ const AspenPrice = () => {
         </Col>
       </Row>
 
-      <Modals
+      <AspenModals
         show={show}
         handleClose={handleClose}
         title="Download Pricesheet"

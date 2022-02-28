@@ -6,7 +6,7 @@ const Amenities = () => {
     <div id="amenities" className="py-3 py-md-5">
       <Container fluid className="ps-0 pe-0">
         <Row className="justify-content-center">
-          <h2 className="text-primary text-center py-2"> Amenities</h2>
+          <h2 className="text-primary text-center py-2 fs-3">Prestige City Amenities</h2>
           <Col md={4} xs={6} className="pt-2 pb-2 pt-md-0">
             <ul>
               <li>Fully Fledged Gymanasium</li>

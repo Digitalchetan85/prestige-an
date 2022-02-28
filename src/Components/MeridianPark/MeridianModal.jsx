@@ -6,7 +6,7 @@ import axios from "axios";
 import Logo from "../../images/logo-1.png";
 import {useNavigate} from "react-router-dom";
 
-const ContactModal = (props) => {
+const MeridianModal = (props) => {
   const [formStatus, setformStatus] = useState("");
   const navigate = useNavigate("/success");
 
@@ -45,17 +45,16 @@ const ContactModal = (props) => {
 
     axios
       .post(
-        "https://buildeskapi.azurewebsites.net/api/Webhook",
-        data
+        "https://buildeskapi.azurewebsites.net/api/Webhook",data
       )
       .then(function (response) {
-        if (response.data.Success){
-          
-        setformStatus("Thank you for contacting us. We'll reach you soon.");
+        if(response.data.Success) {
+          setformStatus("Thank you for contacting us. We'll reach you soon.");
         navigate("/success");
         } else {
           setformStatus("Sorry!!! Something went wrong. Please try again")
         }
+        
       })
       .catch(function (error) {
         setformStatus("Sorry!!! Something went wrong. Please try again")
@@ -214,4 +213,4 @@ const ContactModal = (props) => {
   );
 };
 
-export default ContactModal;
+export default MeridianModal;

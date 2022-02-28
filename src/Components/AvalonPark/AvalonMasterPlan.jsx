@@ -10,8 +10,8 @@ const AvalonMasterPlan = () => {
 
   return (
     <div>
-      <h2 className="pt-2 pb-2 text-center text-primary">
-        Master Plan & Floor Plans
+      <h2 className="pt-2 pb-2 text-center text-primary fs-3">
+        Avalon Park Master & Floor Plans
       </h2>
       <Tabs
         id="controlled-tab-example"

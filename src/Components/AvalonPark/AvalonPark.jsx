@@ -4,14 +4,29 @@ import About from "../Includes/AboutDeveloper";
 import Contact from "../Includes/Contact";
 import FixedIcons from "../Includes/FixedIcons";
 import Info from "../Includes/Info";
+import VirtualTour from "../Includes/VirtualTour";
 import AvalonMasterPlan from "./AvalonMasterPlan";
 import AvalonPrice from "./AvalonPrice";
 import AvalonSlider from "./AvalonSlider";
 import OtherProjectsAvalon from "./OtherProjectsAvalon";
+import {Helmet} from "react-helmet";
 
 const AvalonPark = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Avalon Park | Prestige City | 3BHK | 4BHK Apartments </title>
+        <link rel="canonical" href="https://theprestigecitysarjapur.com/projects/avalon-park" />
+        <meta
+          name="description"
+          content="Avalon Park well developed Prestige City project in 6.8 Acres, Homes are built as 3, 4BHK Apartments with open windows."
+          name="Robots" content="INDEX,FOLLOW"
+          name="allow-search" content="yes"
+          name="search engines" content="ALL"
+          name="expires" content="Never"
+        />
+      </Helmet>
       <AvalonSlider />
       <Container fluid>
         <Row>
@@ -20,8 +35,8 @@ const AvalonPark = () => {
               <Container fluid className="ps-0 pe-0">
                 <Row>
                   <Col md={12}>
-                    <h2 className="pb-2 text-center text-primary py-2 py-md-5">
-                      Project Highlights
+                    <h2 className="pb-2 text-center text-primary py-2 py-md-5 fs-3">
+                      Avalon Park Project Highlights
                     </h2>
                     <span className="bg-danger position-absolute start-50 span-line"></span>
                     <Table className="table table-bordered align-middle">
@@ -52,8 +67,8 @@ const AvalonPark = () => {
               <Container fluid className="ps-0 pe-0">
                 <Row>
                   <Col md={12}>
-                    <h2 className="py-2 text-center text-primary">
-                      About Avalon Park @ Prestige City
+                    <h2 className="py-2 text-center text-primary fs-3">
+                      About Avalon Park Prestige City
                     </h2>
                     <p>
                       Your home at Avalon Park is a well designed haven that is
@@ -84,8 +99,8 @@ const AvalonPark = () => {
             <div className="py-3 py-md-5" id="amenites">
               <Container fluid className="ps-0 pe-0">
                 <Row className="justify-content-center">
-                  <h2 className="text-center text-primary py-2 py-md-3">
-                    Amenities
+                  <h2 className="text-center text-primary py-2 py-md-3 fs-3">
+                  Avalon Park Amenities
                   </h2>
                   <Col md={3} xs={6}>
                     <ul>
@@ -116,6 +131,7 @@ const AvalonPark = () => {
                 <Row>
                   <AvalonPrice />
                   <Info />
+                  <VirtualTour />
                 </Row>
               </Container>
             </div>

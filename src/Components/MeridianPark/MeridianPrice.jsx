@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Button, Col, Container, Row, Table } from "react-bootstrap";
-import Modals from "../Includes/Modals";
+import { Button, Col, Row, Table } from "react-bootstrap";
+import MeridianModal from "./MeridianModal";
 
 const MeridianPrice = () => {
   const [show, setShow] = useState(false);
@@ -11,7 +11,7 @@ const MeridianPrice = () => {
       <Row className="justify-content-center">
         <Col md={12} xs={12}>
           <div className="">
-            <h2 className="text-primary text-center py-3">Pricing</h2>
+            <h2 className="text-primary text-center py-3 fs-3">Meridian Park - Pricing</h2>
             <Table
               responsive="sm"
               className="align-middle text-center border-transparent"
@@ -75,7 +75,7 @@ const MeridianPrice = () => {
         </Col>
       </Row>
 
-      <Modals
+      <MeridianModal
         show={show}
         handleClose={handleClose}
         title="Download Pricesheet"

@@ -25,19 +25,19 @@ const TopHeader = () => {
 
   return (
     <div className="sticky-top" id="navbar">
-      <div id="top-header" className="p-2 p-md-1 bg-warning">
+      <div id="top-header" className="p-2 p-md-1 bg-dark">
         <Container>
           <Row className="justify-content-center">
             <Col
               md={4}
-              className="d-none d-md-block text-white fw-bold align-self-center"
+              className="d-none d-md-block text-info fw-bold align-self-center"
             >
               <i className="fa fa-map-marker-alt"></i> Sarjapur Rd Bangalore.
             </Col>
             <Col md={4} xs={5} className="align-self-center">
               <div className="text-center">
                 <Button
-                  variant="primary"
+                  variant="info"
                   size="sm"
                   onClick={handleShow}
                   className="custom-button"
@@ -50,9 +50,9 @@ const TopHeader = () => {
               <div className="text-center">
                 <a
                   href="tel:+918095999000"
-                  className="anchor btn btn-transparent fw-bold text-white m-1"
+                  className="anchor p-0 btn btn-transparent fw-bold text-info m-1"
                 >
-                  +91-80959 99000
+                  <i className="fa fa-phone-volume"></i> +91-80959 99000
                 </a>
               </div>
             </Col>
@@ -67,7 +67,7 @@ const TopHeader = () => {
         className="shadow-sm bg-white"
       >
         <Container>
-          <Navbar.Brand href="">
+          <Navbar.Brand as={Link} to="/">
             <Image src={Logo} className="img-fluid" alt="" />
           </Navbar.Brand>
           {/* <Nav.Link
@@ -79,7 +79,7 @@ const TopHeader = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto me-auto">
-              <Nav.Link href="/now">Home</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="#overview">Overview</Nav.Link>
               <NavDropdown
                 title="Prestige City Projects"
@@ -131,7 +131,7 @@ const TopHeader = () => {
                                 src={image1}
                               />
                               <span className="position-absolute top-0 end-0 badge rounded-pill bg-danger m-1 pill-custom">
-                                Coming Soon
+                                New Launch
                               </span>
                               <p className="text-dark m-0 py-2 text-primary text-center">
                                 Excl. 3 Bed Apartments
@@ -157,7 +157,7 @@ const TopHeader = () => {
                           >
                             <Image className="img-fluid" alt="" src={image2} />
                             <span className="position-absolute top-0 end-0 badge rounded-pill bg-danger m-1 pill-custom">
-                              Coming Soon
+                              New Launch
                             </span>
                             <p className="text-dark m-0 py-2 text-primary text-center">
                               1BHK & 2BHK Bed Apartments
@@ -182,7 +182,7 @@ const TopHeader = () => {
                           >
                             <Image className="img-fluid" alt="" src={image3} />
                             <span className="position-absolute top-0 end-0 badge rounded-pill bg-danger m-1 pill-custom">
-                              Coming Soon
+                              Sold Out
                             </span>
                             <p className="text-dark m-0 py-2 text-primary text-center">
                               3BHK & 4BHK Apartments
@@ -207,7 +207,7 @@ const TopHeader = () => {
                           >
                             <Image className="img-fluid" alt="" src={image4} />
                             <span className="position-absolute top-0 end-0 badge rounded-pill bg-danger m-1 pill-custom">
-                              Coming Soon
+                              New Launch
                             </span>
                             <p className="text-dark m-0 py-2 text-primary text-center">
                               4BHK Villas
@@ -231,7 +231,7 @@ const TopHeader = () => {
                           <div className="position-relative">
                             <Image className="img-fluid" alt="" src={image5} />
                             <span className="position-absolute top-0 end-0 badge rounded-pill bg-danger m-1 pill-custom">
-                              Coming Soon
+                              New Launch
                             </span>
                             <p className="text-dark m-0 py-2 text-primary text-center">
                               Plots
@@ -247,6 +247,7 @@ const TopHeader = () => {
               <Nav.Link href="#master-plan">Master Plan</Nav.Link>
               <Nav.Link href="#pricing">Pricing</Nav.Link>
               <Nav.Link href="#virtual-tour">Virtual Tour</Nav.Link>
+              <Nav.Link as={Link} to="/blogs">blogs</Nav.Link>
             </Nav>
             {/* <Nav>
               <Nav.Link

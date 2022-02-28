@@ -6,7 +6,7 @@ import axios from "axios";
 import Logo from "../../images/logo-1.png";
 import {useNavigate} from "react-router-dom";
 
-const ContactModal = (props) => {
+const AvalonModal = (props) => {
   const [formStatus, setformStatus] = useState("");
   const navigate = useNavigate("/success");
 
@@ -35,23 +35,21 @@ const ContactModal = (props) => {
       apikey: "897ec314-c85b-4291-96ee-48648d5dcfbd",
       firstname: values.name,
       lastname: "",
-      source: "Prestige City",
+      source: "Prestige Avalon Park",
       mobile: values.phone,
       CreatedDate: "17/02/2022",
       email: values.email,
       Remark: "Brochure Downloaded",
-      ProjectUID: "2597B322-F920-442A-9050-127AFD565726",
+      ProjectUID: "70991E57-5837-4689-A286-B98D9853EB9A",
     }
 
     axios
       .post(
-        "https://buildeskapi.azurewebsites.net/api/Webhook",
-        data
+        "https://buildeskapi.azurewebsites.net/api/Webhook", data
       )
       .then(function (response) {
-        if (response.data.Success){
-          
-        setformStatus("Thank you for contacting us. We'll reach you soon.");
+        if(response.data.Success) {
+          setformStatus("Thank you for contacting us. We'll reach you soon.");
         navigate("/success");
         } else {
           setformStatus("Sorry!!! Something went wrong. Please try again")
@@ -214,4 +212,4 @@ const ContactModal = (props) => {
   );
 };
 
-export default ContactModal;
+export default AvalonModal;

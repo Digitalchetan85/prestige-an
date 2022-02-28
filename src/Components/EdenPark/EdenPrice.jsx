@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col,  Row, Table } from "react-bootstrap";
-import Modals from "../Includes/Modals";
+import EdenModal from "./EdenModal";
 
 const EdenPrice = () => {
 
@@ -13,7 +13,7 @@ const EdenPrice = () => {
       <Row className="justify-content-center">
         <Col md={10} xs={12}>
           <div className="">
-            <h2 className="text-primary text-center py-3">Pricing</h2>
+            <h2 className="text-primary text-center py-3 fs-3">Eden Park Pricing</h2>
             <Table
               responsive="sm"
               className="align-middle text-center border-transparent"
@@ -63,7 +63,7 @@ const EdenPrice = () => {
         </Col>
       </Row>
 
-      <Modals
+      <EdenModal
         show={show}
         handleClose={handleClose}
         title="Download Pricesheet"

@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Image, Row } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import OwlCarousel from "react-owl-carousel2";
 import "react-owl-carousel2/src/owl.carousel.css";
 import "react-owl-carousel2/src/owl.theme.default.css";
@@ -14,33 +14,48 @@ const MainSlider = () => {
   const associations = [
     {
       id: 1,
-      ImageUrl: Image1,
+      ImageUrl: Image2,
       alt: "",
-      link:"/projects/aspen-greens"
+      link: "/projects/avalon-park",
+      title: "Avalon Park - Prestige City",
+      specification: "3 & 4BHK Apartments",
+      price: "79.99L* Onwards",
     },
     {
       id: 2,
-      ImageUrl: Image2,
+      ImageUrl: Image4,
       alt: "",
-      link:"/projects/avalon-park"
+      link: "/projects/meridian-park",
+      title: "Meridian Park - Prestige City",
+      specification: "Excl. 3BHK Apartments",
+      price: "87L* Onwards",
     },
     {
       id: 3,
       ImageUrl: Image3,
       alt: "",
-      link:"/projects/eden-park"
+      link: "/projects/eden-park",
+      title: "Eden Park - Prestige City",
+      specification: "1 & 2BHK Apartments",
+      price: "39.99L* Onwards",
     },
     {
       id: 4,
-      ImageUrl: Image4,
+      ImageUrl: Image1,
       alt: "",
-      link:"/projects/meridian-park"
+      link: "/projects/aspen-greens",
+      title: "Aspen Greens - Prestige City",
+      specification: "4BHK Villas",
+      price: "3.2Cr* Onwards",
     },
     {
       id: 5,
       ImageUrl: Image5,
       alt: "",
-      link:"/projects/great-acres"
+      link: "/projects/great-acres",
+      title: "Great Acres - Prestige City",
+      specification: "Plots",
+      price: "79.99L* Onwards",
     },
   ];
 
@@ -72,7 +87,7 @@ const MainSlider = () => {
           <div className="mx-2" key={index}>
             <Row>
               <Col md={12}>
-                <Link to={item.link}>
+                {/* <Link to={item.link}> */}
                   <div className="text-center">
                     <Image
                       src={item.ImageUrl}
@@ -80,7 +95,12 @@ const MainSlider = () => {
                       className="img-fluid"
                     />
                   </div>
-                </Link>
+                  <div className="position-absolute bottom-0 start-50 translate-middle-x bg-dark text-white p-2 opacity-75 text-center">
+                    <Link to={item.link} className="text-decoration-none text-white"><h2 className="opacity-100 fs-5 fw-bold">{item.title}</h2></Link>
+                    <h3 className="opacity-100 fs-6 fw-bold">{item.price}</h3>
+                    <h3 className="fs-6">{item.specification}</h3>
+                  </div>
+                {/* </Link> */}
               </Col>
             </Row>
           </div>

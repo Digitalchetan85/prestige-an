@@ -11,8 +11,8 @@ const MasterPlan = () => {
 
   return (
     <div id="master-plan" className="pt-3 pb-3 pt-md-5 pb-md-5">
-      <h2 className="pt-2 pb-2 text-center text-primary">
-        Master Plan & Floor Plans
+      <h2 className="pt-2 pb-2 text-center text-primary fs-4">
+        Prestige City Master & Floor Plans
       </h2>
       <Container fluid className="ps-0 pe-0">
         <Tabs
@@ -21,7 +21,10 @@ const MasterPlan = () => {
           onSelect={(k) => setKey(k)}
           className="mb-3 text-dark"
         >
-          <Tab eventKey="all" title="Eden park" className="text-dark">
+        <Tab eventKey="all" title="Meridian Park">
+          {<MeridianParkPlans />}
+        </Tab>
+          <Tab eventKey="three-bhk" title="Eden park" className="text-dark">
             <EdenParkPlans />
           </Tab>
           <Tab
@@ -30,9 +33,6 @@ const MasterPlan = () => {
             className="text-dark"
           >
             <AvalonParkPlans />
-          </Tab>
-          <Tab eventKey="three-bhk" title="Meridian Park">
-            {<MeridianParkPlans />}
           </Tab>
           <Tab eventKey="four-bhk1" title="Aspen Greens">
             {<AspenParkPlans />}

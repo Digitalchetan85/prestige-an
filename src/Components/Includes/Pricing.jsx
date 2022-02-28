@@ -10,9 +10,9 @@ const Pricing = () => {
   return (
     <div id="pricing" className="bg-light">
       <Container fluid className="ps-0 pe-0">
-        <h2 className="text-primary text-center py-2">Pricing</h2>
+        <h2 className="text-primary text-center py-2 fs-3">Prestige City Pricing</h2>
         <Tabs
-          defaultActiveKey="profile"
+          defaultActiveKey="home"
           id="uncontrolled-tab-example"
           className="mb-3"
         >

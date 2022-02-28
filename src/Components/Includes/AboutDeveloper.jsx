@@ -23,7 +23,7 @@ const About = () => {
               <h2 className="py-2 text-primary text-uppercase text-center">
                 About Developer
               </h2>
-              <p className="justify-content text-center">
+              <p className="justify-content">
                 Over the last decade, the Prestige Group has firmly established
                 itself as one of the leading and most successful developers of
                 real estate in India by imprinting its indelible mark across all

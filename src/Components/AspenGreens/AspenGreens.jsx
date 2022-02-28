@@ -4,14 +4,29 @@ import About from "../Includes/AboutDeveloper";
 import Contact from "../Includes/Contact";
 import FixedIcons from "../Includes/FixedIcons";
 import Info from "../Includes/Info";
+import VirtualTour from "../Includes/VirtualTour";
 import AspenMasterPlan from "./AspenMasterPlan";
 import AspenPrice from "./AspenPrice";
 import AspenSlider from "./AspenSlider";
 import OtherProjectsAspen from "./OtherProjectsAspen";
+import {Helmet} from "react-helmet";
 
 const AspenGreens = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Aspen Greens | Luxury Villas | 4BHK Premium Villas </title>
+        <link rel="canonical" href="https://theprestigecitysarjapur.com/projects/aspen-greens" />
+        <meta
+          name="description"
+          content="Aspen Greens a Luxurious Villas with private garden area and covered space to park 2 cars comfortably built in 20.9 Acres."
+          name="Robots" content="INDEX,FOLLOW"
+          name="allow-search" content="yes"
+          name="search engines" content="ALL"
+          name="expires" content="Never"
+        />
+      </Helmet>
       <AspenSlider />
       <Container fluid>
         <Row>
@@ -20,7 +35,7 @@ const AspenGreens = () => {
               <Container fluid className="ps-0 pe-0">
                 <Row>
                   <Col md={12}>
-                    <h2 className="pb-2 text-center text-primary py-2 py-md-5">
+                    <h2 className="pb-2 text-center text-primary py-2 py-md-5 fs-3">
                       Project Highlights
                     </h2>
                     <span className="bg-danger position-absolute start-50 span-line"></span>
@@ -52,8 +67,8 @@ const AspenGreens = () => {
               <Container fluid className="ps-0 pe-0">
                 <Row>
                   <Col md={12}>
-                    <h2 className="py-2 text-center text-primary">
-                      About Aspen Greens @ Prestige City
+                    <h2 className="py-2 text-center text-primary fs-4">
+                      About Aspen Greens - Prestige City
                     </h2>
                     <p>
                       Your villa at Aspen Greens confers a clear mark of
@@ -102,8 +117,8 @@ const AspenGreens = () => {
             <div className="py-3 py-md-5" id="amenites">
               <Container fluid className="ps-0 pe-0">
                 <Row className="justify-content-center">
-                  <h2 className="text-center text-primary py-md-3 py-2">
-                    Amenities
+                  <h2 className="text-center text-primary py-md-3 py-2 fs-3">
+                    Aspen Greens Amenities
                   </h2>
                   <Col md={3} xs={6}>
                     <ul>
@@ -133,6 +148,7 @@ const AspenGreens = () => {
                 <Row>
                   <AspenPrice />
                   <Info />
+                  <VirtualTour />
                 </Row>
               </Container>
             </div>
@@ -142,7 +158,7 @@ const AspenGreens = () => {
           </Col>
         </Row>
       </Container>
-      <OtherProjectsAspen /> 
+      <OtherProjectsAspen />
       <About />
       <FixedIcons />
     </div>

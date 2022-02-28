@@ -22,7 +22,7 @@ const MeridianFloorplan = () => {
           <SRLWrapper>
             <Row className="g-3">
               {ThreeBHKImages.map((item) => (
-                <Col md={3} key={item.id}>
+                <Col md={3} xs={6} sm={6} key={item.id}>
                   <div className="m-1 text-center border border-dark p-1 rounded">
                     <a href={item.imgName}>
                       <Image
