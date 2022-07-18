@@ -6,15 +6,19 @@ import Image3 from "../../images/projects/meridian/3bhk-type-d2.png";
 import Image4 from "../../images/projects/meridian/3bhk-type-E8.png";
 import Image5 from "../../images/projects/meridian/3bhk-type-F1.png";
 import Image6 from "../../images/projects/meridian/3bhk-type-F2.png";
+import Image7 from "../../images/projects/meridian/3bhk-type-e6.jpg";
+import Image8 from "../../images/projects/meridian/3bhk-type-e4.jpg";
 
 const MeridianAllImages = () => {
   const images = [
     { id: 1, imgName: Image1, alt: "", tag: "Master Plan" },
     { id: 2, imgName: Image2, alt: "", tag: "Numbering Plan" },
-    { id: 3, imgName: Image3, alt: "", tag: "3BHK Type D2" },
-    { id: 4, imgName: Image4, alt: "", tag: "3bhk Type E8" },
-    { id: 5, imgName: Image5, alt: "", tag: "3BHK Type F1" },
-    { id: 6, imgName: Image6, alt: "", tag: "3BHK Type F2" },
+    { id: 3, imgName: Image3, alt: "", tag: "3BHK 1387 Sqft." },
+    { id: 8, imgName: Image8, alt: "", tag: "3BHK 1629 Sqft." },
+    { id: 7, imgName: Image7, alt: "", tag: "3BHK 1641 Sqft." },
+    { id: 4, imgName: Image4, alt: "", tag: "3bhk 1665 Sqft." },
+    { id: 5, imgName: Image5, alt: "", tag: "3BHK 1851 Sqft." },
+    { id: 6, imgName: Image6, alt: "", tag: "3BHK 1865 Sqft." },
   ];
 
   return (

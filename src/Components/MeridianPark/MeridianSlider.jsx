@@ -8,7 +8,9 @@ import Image2 from "../../images/slider/meridian/image-2.png";
 import Image3 from "../../images/slider/meridian/image-3.png";
 import Image4 from "../../images/slider/meridian/image-4.png";
 import Logo from "../../images/projects/meridian-park-@-the-prestige-city-logo.png";
-import MeridianModal from "./MeridianModal";
+import Modals from "../Includes/BrochureModals";
+import DownloadBrochure from "../Includes/DownloadBrochure";
+import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 
 const MeridianSlider = () => {
   const [show, setShow] = useState(false);
@@ -62,19 +64,25 @@ const MeridianSlider = () => {
     <div>
       <OwlCarousel options={options}>
         {associations.map((item, index) => (
-          <div className="mx-2" key={index}>
-            <Row>
-              <Col md={12}>
-                <div className="text-center">
-                  <Image
-                    src={item.ImageUrl}
-                    alt={item.alt}
-                    className="img-fluid"
-                  />
-                </div>
-              </Col>
-            </Row>
-          </div>
+          <SimpleReactLightbox>
+            <SRLWrapper>
+              <div className="mx-2" key={index}>
+                <Row>
+                  <Col md={12}>
+                    <div className="text-center">
+                      <a href={item.ImageUrl}>
+                        <Image
+                          src={item.ImageUrl}
+                          alt={item.alt}
+                          className="img-fluid"
+                        />
+                      </a>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            </SRLWrapper>
+          </SimpleReactLightbox>
         ))}
       </OwlCarousel>
       <div className="bg-light position-relative rounded" id="custom-content">
@@ -96,23 +104,34 @@ const MeridianSlider = () => {
             <Col md={8} className="align-self-center">
               <Row className="">
                 <Col md={8} className="">
-                  <div className="m-1 text-center text-md-start">
-                    <h1 className="text-primary fs-4">Meridian Park @ The Prestige City</h1>
-                    <p className="m-0 fw-bold text-center text-md-start">
-                      <p className=" text-center text-md-start mb-0">Sarjapur Main Road, Bangalore</p>
-                      <p className=" text-center text-md-start mb-0">87L* Onwards </p>
+                  <div className="m-1 text-start text-md-start">
+                    <h1 className="text-primary fs-4">
+                      Meridian Park @ The Prestige City
+                    </h1>
+                    <p className="m-0 fw-bold text-start text-md-start">
+                      <p className=" text-start text-md-start mb-0 fs-6">
+                        Sarjapur Main Road, Bangalore
+                      </p>
+                      <p className=" text-start text-md-start mb-0 fs-6">
+                        1.06Cr* Onwards{" "}
+                      </p>
                     </p>
                   </div>
                 </Col>
-                <Col md={4} className="align-self-center">
-                  <div className="text-center text-uppercase">
+                <Col md={6} xs={6} className="align-self-center">
+                  <div className="text-start text-uppercase">
                     <Button
                       variant="primary"
                       onClick={handleShow}
-                      className="my-1"
+                      className="my-1 btn text-white"
                     >
-                      Download Brouchure
+                      Download Price Sheet
                     </Button>
+                  </div>
+                </Col>
+                <Col md={6} xs={6} className="align-self-center">
+                  <div className="text-center text-uppercase">
+                    <DownloadBrochure />
                   </div>
                 </Col>
               </Row>
@@ -121,10 +140,11 @@ const MeridianSlider = () => {
         </Container>
       </div>
 
-      <MeridianModal
+      <Modals
         show={show}
         handleClose={handleClose}
-        title="Download Brouchure"
+        title="Download Brochure"
+        message="Please Fill in your details & Download the Complete Brochure"
         projectid="57a99891-ec20-472a-b230-187e20fee71f"
       />
     </div>

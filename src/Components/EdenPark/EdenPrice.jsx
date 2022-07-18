@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col,  Row, Table } from "react-bootstrap";
-import EdenModal from "./EdenModal";
+import Modals from "../Includes/Modals";
 
 const EdenPrice = () => {
 
@@ -37,7 +37,7 @@ const EdenPrice = () => {
                       variant="primary"
                       size="sm"
                       onClick={handleShow}
-                      className="my-3 custom-button"
+                      className="my-3 custom-button text-white"
                     >
                       <i className="fa fa-spinner fa-flip fa-download"></i> Price Sheet
                     </Button>
@@ -51,7 +51,7 @@ const EdenPrice = () => {
                       variant="primary"
                       size="sm"
                       onClick={handleShow}
-                      className="my-3 custom-button"
+                      className="my-3 custom-button text-white"
                     >
                       <i className="fa fa-spinner fa-flip fa-download"></i> Price Sheet
                     </Button>
@@ -63,7 +63,7 @@ const EdenPrice = () => {
         </Col>
       </Row>
 
-      <EdenModal
+      <Modals
         show={show}
         handleClose={handleClose}
         title="Download Pricesheet"

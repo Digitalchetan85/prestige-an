@@ -9,6 +9,7 @@ import Image3 from "../../images/slider/the-great-acres/the-great-acres-3.png";
 import Image4 from "../../images/slider/the-great-acres/the-great-acres-4.png";
 import Logo from "../../images/projects/the-great-acres-@-the-prestige-city-logo.png"
 import GreatModal from "./GreatModal";
+import BrochureModals from "../Includes/BrochureModals";
 
 
 const GreatAcresSlider = () => {
@@ -113,7 +114,7 @@ const GreatAcresSlider = () => {
                   <Button
                     variant="primary"
                     onClick={handleShow}
-                    className="my-1"
+                    className="my-1 text-white"
                   >
                     Download Brouchure
                   </Button>
@@ -125,7 +126,7 @@ const GreatAcresSlider = () => {
       </Container>
     </div>
 
-    <GreatModal
+    <BrochureModals
       show={show}
       handleClose={handleClose}
       title="Download Brouchure"

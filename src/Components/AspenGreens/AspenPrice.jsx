@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Row, Table } from "react-bootstrap";
-import AspenModals from "./AspenModal";
+import Modals from "../Includes/Modals";
 
 const AspenPrice = () => {
   const [show, setShow] = useState(false);
@@ -35,7 +35,7 @@ const AspenPrice = () => {
                       variant="primary"
                       size="sm"
                       onClick={handleShow}
-                      className="my-3 custom-button"
+                      className="my-3 custom-button text-white"
                     >
                       <i className="fa fa-spinner fa-flip fa-download"></i> Price Sheet
                     </Button>
@@ -47,7 +47,7 @@ const AspenPrice = () => {
         </Col>
       </Row>
 
-      <AspenModals
+      <Modals
         show={show}
         handleClose={handleClose}
         title="Download Pricesheet"

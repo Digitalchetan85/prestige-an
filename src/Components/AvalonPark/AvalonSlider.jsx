@@ -6,7 +6,7 @@ import "react-owl-carousel2/src/owl.theme.default.css";
 import Image1 from "../../images/slider/avalon-park/avalon-park-1.png";
 import Image2 from "../../images/slider/avalon-park/avalon-park-2.png";
 import Logo from "../../images/projects/avalon-park-@-the-prestige-city-logo.png"
-import Modals from "../Includes/Modals";
+import Modals from "../Includes/BrochureModals";
 
 
 const AvalonSlider = () => {
@@ -98,7 +98,7 @@ const AvalonSlider = () => {
                   <Button
                     variant="primary"
                     onClick={handleShow}
-                    className="my-1"
+                    className="my-1 text-white"
                   >
                     Download Brouchure
                   </Button>

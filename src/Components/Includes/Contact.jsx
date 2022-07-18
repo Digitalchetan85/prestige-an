@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { Button, Row, Col, Container, } from "react-bootstrap";
+import { Button, Row, Col, Container, InputGroup } from "react-bootstrap";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import CountryDropdown from "country-dropdown-with-flags-for-react";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
 
 const Contact = () => {
   const [formStatus, setformStatus] = useState("");
-
+  const [value, setValue] = useState();
   const initialValues = {
     name: "",
     email: "",
@@ -27,6 +30,7 @@ const Contact = () => {
   });
 
   const onSubmit = (values) => {
+    // console.log(values);
     // const data = "";
 
     let data = {
@@ -39,26 +43,27 @@ const Contact = () => {
       email: values.email,
       Remark: "Brochure Downloaded",
       ProjectUID: "2597B322-F920-442A-9050-127AFD565726",
-    }
+    };
 
     // console.log(data);
 
     axios
-      .post("https://buildeskapi.azurewebsites.net/api/Webhook", data
-      )
+      .post("https://buildeskapi.azurewebsites.net/api/Webhook", data)
       .then(function (response) {
         if (response.data.Success) {
-          setformStatus("Thanks for contacting us. We will get back to you soon.");
+          setformStatus(
+            "Thanks for contacting us. We will get back to you soon."
+          );
         } else {
-          setformStatus("Sorry!!! Something went wrong. Please try again")
+          setformStatus("Sorry!!! Something went wrong. Please try again");
         }
       })
       .catch(function (error) {
-        setformStatus("Sorry!!! Something went wrong. Please try again")
+        setformStatus("Sorry!!! Something went wrong. Please try again");
       });
   };
   return (
-    <div className="py-3 py-md-5 sticky-top" id="contact">
+    <div className="sticky-top" id="contact">
       <Container>
         <Row className="justify-content-center">
           <Col md={12} className="px-0">
@@ -67,69 +72,84 @@ const Contact = () => {
               validationSchema={validationSchema}
               onSubmit={onSubmit}
             >
-              <Form className="bg-white p-3 rounded shadow">
-                <h4 className="py-3 text-center text-primary">
-                  Get Our Experts Call
-                </h4>
-                <Row className="mb-3">
+              <Form className="py-2 rounded" style={{ height: "70vh" }}>
+                {/* <h4 className="p-2 rounded text-center text-white bg-primary fs-5">Enquiry Now</h4> */}
+                <div className="text-center">
+                  <Button className="btn btn-primary text-white">
+                    <i className="fa fa-phone-volume"></i> +91 80959 99000
+                  </Button>
+                </div>
+                <div className="text-center">
+                  <h5 className="text-center fs-6 py-3">
+                    Pre-Register here for Best Offers
+                  </h5>
+                </div>
+                <Row className="mb-2">
                   <Col md={12}>
-                    <div className="mb-3">
-                      <a
-                        href="tel:08095999000"
-                        className="btn btn-dark form-control fw-bold py-2"
-                      >
-                        <i className="fa fa-phone-volume"></i> +91 80959 99000
-                      </a>
+                    <div className="mb-2">
+                      <InputGroup className="mb-3" style={{ height: "50px" }}>
+                        <InputGroup.Text id="basic-addon1" className="bg-white">
+                          <i className="fa fa-user text-primary"></i>
+                        </InputGroup.Text>
+                        <Field
+                          className="form-control"
+                          type="text"
+                          aria-label="Username"
+                          aria-describedby="basic-addon1"
+                          id="name"
+                          name="name"
+                          placeholder="Name"
+                        />
+                      </InputGroup>
                     </div>
                   </Col>
+                  <small className="text-danger">
+                    <ErrorMessage name="name" />
+                  </small>
                 </Row>
-                <Row className="mb-3">
+                <Row className="mb-2">
                   <Col md={12}>
-                    <div className="mb-3">
-                      <Field
-                        type="text"
-                        className="form-control"
-                        id="name"
-                        name="name"
-                        placeholder="Name"
-                      />
-                      <small className="text-danger">
-                        <ErrorMessage name="name" />
-                      </small>
+                    <div className="mb-2">
+                      <InputGroup className="mb-3" style={{ height: "50px" }}>
+                        <InputGroup.Text id="basic-addon1">
+                          <i className="fa fa-envelope text-primary"></i>
+                        </InputGroup.Text>
+                        <Field
+                          className="form-control"
+                          type="email"
+                          id="email"
+                          name="email"
+                          placeholder="Email"
+                        />
+                      </InputGroup>
                     </div>
                   </Col>
+                  <small className="text-danger">
+                    <ErrorMessage name="email" />
+                  </small>
                 </Row>
-                <Row className="mb-3">
+                <Row className="mb-2">
                   <Col md={12}>
-                    <div className="mb-3">
-                      <Field
-                        type="email"
-                        className="form-control"
-                        id="email"
-                        name="email"
-                        placeholder="Email"
-                      />
-                      <small className="text-danger">
-                        <ErrorMessage name="email" />
-                      </small>
+                    <div className="mb-2">
+                      <InputGroup className="mb-3" style={{ height: "50px" }}>
+                        <InputGroup.Text id="basic-addon1">
+                          <i className="fa fa-phone-volume text-primary"></i>
+                        </InputGroup.Text>
+                        <Field
+                          className="form-control"
+                          type="tel"
+                          aria-label="Username"
+                          aria-describedby="basic-addon1"
+                          id="phone"
+                          name="phone"
+                          placeholder="Phone"
+                        />
+                      </InputGroup>
                     </div>
                   </Col>
-                </Row>
-                <Row className="mb-3">
-                  <Col md={12}>
-                    <div className="mb-3">
-                      <Field
-                        type="tel"
-                        className="form-control"
-                        id="phone"
-                        name="phone"
-                        placeholder="Enter phone number"
-                      />
-                      <small className="text-danger">
-                        <ErrorMessage name="phone" />
-                      </small>
-                    </div>
-                  </Col>
+                  <small className="text-danger">
+                    <ErrorMessage name="phone" />
+                  </small>
                 </Row>
                 <Row className="">
                   <Col md={12}>
@@ -142,12 +162,12 @@ const Contact = () => {
                 </Row>
                 <Row className="mb-3">
                   <Col md={12}>
-                    <div className="">
+                    <div className="text-center">
                       <Button
-                        className="btn btn-warning text-white fw-bold form-control"
+                        className="btn btn-primary text-white px-5"
                         type="submit"
                       >
-                        Submit
+                        <i className="fa fa-phone-volume text-white pe-2"></i> Request for Call back
                       </Button>
                     </div>
                   </Col>

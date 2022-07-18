@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col,  Row, Table } from "react-bootstrap";
-import GreatModal from "./GreatModal";
+import GreatModal from "../Includes/Modals";
 
 const GreatAcresPrice = () => {
 
@@ -39,7 +39,7 @@ const GreatAcresPrice = () => {
                         variant="primary"
                         size="sm"
                         onClick={handleShow}
-                        className="custom-button"
+                        className="custom-button text-white"
                       >
                         <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
                         Sold Out
@@ -56,7 +56,7 @@ const GreatAcresPrice = () => {
                         variant="primary"
                         size="sm"
                         onClick={handleShow}
-                        className="custom-button"
+                        className="custom-button text-white"
                       >
                         <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
                         Sold Out
@@ -73,7 +73,7 @@ const GreatAcresPrice = () => {
                         variant="primary"
                         size="sm"
                         onClick={handleShow}
-                        className="custom-button"
+                        className="custom-button text-white text-white"
                       >
                         <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
                         Price Sheet
@@ -90,7 +90,7 @@ const GreatAcresPrice = () => {
                         variant="primary"
                         size="sm"
                         onClick={handleShow}
-                        className="custom-button"
+                        className="custom-button text-white text-white"
                       >
                         <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
                         Price Sheet
@@ -107,7 +107,7 @@ const GreatAcresPrice = () => {
                         variant="primary"
                         size="sm"
                         onClick={handleShow}
-                        className="custom-button"
+                        className="custom-button text-white text-white"
                       >
                         <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
                         Price Sheet

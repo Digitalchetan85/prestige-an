@@ -42,7 +42,7 @@ const Pricing = () => {
                         variant="primary"
                         size="sm"
                         onClick={handleShow}
-                        className="custom-button"
+                        className="custom-button text-white"
                       >
                         <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
                         Price Sheet
@@ -59,7 +59,7 @@ const Pricing = () => {
                         variant="primary"
                         size="sm"
                         onClick={handleShow}
-                        className="custom-button"
+                        className="custom-button text-white"
                       >
                         <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
                         Price Sheet
@@ -76,7 +76,7 @@ const Pricing = () => {
                         variant="primary"
                         size="sm"
                         onClick={handleShow}
-                        className="custom-button"
+                        className="custom-button text-white"
                       >
                         <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
                         Price Sheet
@@ -93,7 +93,7 @@ const Pricing = () => {
                         variant="primary"
                         size="sm"
                         onClick={handleShow}
-                        className="custom-button"
+                        className="custom-button text-white"
                       >
                         <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
                         Price Sheet
@@ -129,7 +129,7 @@ const Pricing = () => {
                         variant="primary"
                         size="sm"
                         onClick={handleShow}
-                        className="custom-button"
+                        className="custom-button text-white"
                       >
                         <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
                         Price Sheet
@@ -199,7 +199,7 @@ const Pricing = () => {
                         variant="primary"
                         size="sm"
                         onClick={handleShow}
-                        className="custom-button"
+                        className="custom-button text-white"
                       >
                         <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
                         Price Sheet
@@ -216,7 +216,7 @@ const Pricing = () => {
                         variant="primary"
                         size="sm"
                         onClick={handleShow}
-                        className="custom-button"
+                        className="custom-button text-white"
                       >
                         <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
                         Price Sheet
@@ -233,7 +233,7 @@ const Pricing = () => {
                         variant="primary"
                         size="sm"
                         onClick={handleShow}
-                        className="custom-button"
+                        className="custom-button text-white"
                       >
                         <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
                         Price Sheet

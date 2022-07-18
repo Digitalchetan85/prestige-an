@@ -2,7 +2,7 @@
 
 /* make the customizations */
 $theme-colors: (
-  "primary": #09659E,
+  "primary": #B8923F,
   "secondary": #6c757d,
   "dark": #343a40,
   "success": #28a745,
@@ -15,7 +15,7 @@ $theme-colors: (
 /* import bootstrap to set changes */
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-$primary-color: #09659E;
+$primary-color: #B8923F;
 $secondary-color: #E1D1AD;
 $white-color: white;
 $black-color: #000;
@@ -42,7 +42,7 @@ $dark-color: #001524;
     text-transform: uppercase;
     border-right: 1px solid $secondary-color;
     &:hover {
-      color: $secondary-color;
+      color: $primary-color;
     }
     &:last-child{
       border-right: 0px;
@@ -168,7 +168,7 @@ $dark-color: #001524;
 #cre{
   .btn-close {
     color: $white-color !important;
-  }
+  } 
 }
 
 #custom-content {
@@ -176,15 +176,49 @@ $dark-color: #001524;
 }
 
 #contact {
-  top: 110px !important;
+  // top: 110px !important;
+  z-index: 0;
+  .form-control {
+    border-radius: 0px;
+    border-top:0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-color: $primary-color;
+  }
+  .input-group-text {
+    background-color: white;
+    border-radius: 0px;
+    border-top:0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-color: $primary-color;
+  }
+
+}
+#form-setting {
+  .form-control {
+    border-radius: 0px;
+    border-top:0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-color: $primary-color;
+  }
+  .input-group-text {
+    background-color: white;
+    border-radius: 0px;
+    border-top:0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-color: $primary-color;
+  }
+}
+#contact1 {
+  top: 150px !important;
   z-index: 0;
 }
 
-#UNIQUE_ID {
-  display: none !important;
-  .arrow {
-    display: none !important;
-  }
+.form-control:focus {
+  box-shadow: none !important;
 }
 
 p {
@@ -291,3 +325,13 @@ p {
 @include media-breakpoint-only(lg) {  }
 @include media-breakpoint-only(xl) {  }
 @include media-breakpoint-only(xxl) {  }
+
+// .country-select {
+//   width:100% !important;
+// }
+
+// .iti__flag {background-image: url("../node_modules/intl-tel-input/build/img/flags.png");}
+
+// @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+//   .iti__flag {background-image: url("../node_modules/intl-tel-input/build/img/flags@2x.png");}
+// }

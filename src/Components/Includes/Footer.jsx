@@ -19,6 +19,15 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
+      <Container className="border-top border-white">
+        <Row className="justify-content-center">
+          <Col md={8}>
+            <div className="text-center">
+                <p className="text-center text-white mb-0">All rights reserved. Rera No. PRM/KA/RERA/1251/446/AG/180606/000947</p> 
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </footer>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Row, Table } from "react-bootstrap";
-import MeridianModal from "./MeridianModal";
+import MeridianModal from "../Includes/Modals";
 
 const MeridianPrice = () => {
   const [show, setShow] = useState(false);
@@ -28,42 +28,70 @@ const MeridianPrice = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td>3 BHK <br/> 2T</td>
+                  <td>3 BHK 2T</td>
                   <td>1387</td>
                   <td>
                     <Button
                       variant="primary"
                       size="sm"
                       onClick={handleShow}
-                      className="my-3 custom-button"
+                      className="my-3 custom-button text-white text-white"
                     >
                       <i className="fa fa-spinner fa-flip fa-download"></i> Price Sheet
                     </Button>
                   </td>
                 </tr>
                 <tr>
-                  <td>3 BHK <br/> 3T </td>
+                  <td>3 BHK 3T </td>
+                  <td>1629</td>
+                  <td>
+                    <Button
+                      variant="primary"
+                      size="sm"
+                      onClick={handleShow}
+                      className="my-3 custom-button text-white"
+                    >
+                      <i className="fa fa-spinner fa-flip fa-download"></i> Price Sheet
+                    </Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3 BHK 3T </td>
+                  <td>1641</td>
+                  <td>
+                    <Button
+                      variant="primary"
+                      size="sm"
+                      onClick={handleShow}
+                      className="my-3 custom-button text-white"
+                    >
+                      <i className="fa fa-spinner fa-flip fa-download"></i> Price Sheet
+                    </Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3 BHK 3T </td>
                   <td>1665</td>
                   <td>
                     <Button
                       variant="primary"
                       size="sm"
                       onClick={handleShow}
-                      className="my-3 custom-button"
+                      className="my-3 custom-button text-white"
                     >
                       <i className="fa fa-spinner fa-flip fa-download"></i> Price Sheet
                     </Button>
                   </td>
-                </tr>{" "}
+                </tr>
                 <tr>
-                  <td>3 BHK <br/> 3T <br/> Maids Room</td>
+                  <td>3 BHK 3T Maids Room</td>
                   <td>1865</td>
                   <td>
                     <Button
                       variant="primary"
                       size="sm"
                       onClick={handleShow}
-                      className="my-3 custom-button"
+                      className="my-3 custom-button text-white"
                     >
                       <i className="fa fa-spinner fa-flip fa-download"></i> Price Sheet
                     </Button>
@@ -79,6 +107,7 @@ const MeridianPrice = () => {
         show={show}
         handleClose={handleClose}
         title="Download Pricesheet"
+        message="Please Fill in your details & Download Price breakup"
         projectid="57a99891-ec20-472a-b230-187e20fee71f"
       />
     </div>

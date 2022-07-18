@@ -49,7 +49,7 @@ const OtherProjectsMeridian = () => {
             Prestige City Projects
           </h2>
           {projects.map((project) => (
-            <Col md={3} key={project.id}>
+            <Col md={6} key={project.id}>
               <Card>
                 <Card.Img
                   variant="top"
@@ -67,7 +67,7 @@ const OtherProjectsMeridian = () => {
                       variant="primary"
                       as={Link}
                       to={project.link}
-                      className=""
+                      className="text-white"
                     >
                       Read More
                     </Button>

@@ -30,28 +30,28 @@ const Projects = () => {
     description: "1/2 Bed Appartments",
     imageurl: image2,
     link: "/projects/eden-park",
-    status:"New Launch"
+    status:"Under Construction",
 },
 { id: 3, 
     title: "Prestige City Avalon Park",
     description: "3/4 BHK Appartments",
     imageurl: image3,
     link: "/projects/avalon-park",
-    status:"Sold Out"
+    status:"Under Construction"
 },
 { id: 4, 
     title: "Prestige City Aspen Greens",
     description: "4BHK Villas ",
     imageurl: image4,
     link: "/projects/aspen-greens",
-    status:"New Launch"
+    status:"Under Construction"
 },
 { id: 5, 
     title: "Prestige City The Great Acres",
     description: "Plots",
     imageurl: image5,
     link: "/projects/great-acres",
-    status:"New Launch"
+    status:"Sold Out"
 },
 
 
@@ -74,7 +74,7 @@ const Projects = () => {
                     variant="primary"
                     as={Link}
                     to={project.link}
-                    className=""
+                    className="text-white"
                   >
                     Read More
                   </Button>

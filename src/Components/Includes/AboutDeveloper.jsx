@@ -11,7 +11,7 @@ const About = () => {
   useEffect(() => {
     setTimeout(function () {
       setShow(true);
-    }, 7000);
+    }, 60000);
   }, []);
 
   return (
@@ -44,7 +44,8 @@ const About = () => {
       <Modals
         show={show}
         handleClose={handleClose}
-        title="Get More Details."
+        message="Please fill in your details & save your time. We will contact you Now!!!"
+        title="Need Help?"
       />
     </div>
   );

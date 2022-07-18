@@ -8,6 +8,7 @@ import Image2 from "../../images/slider/aspen-greens/aspen-greens-2.png";
 import Image3 from "../../images/slider/aspen-greens/aspen-greens-3.png";
 import Logo from "../../images/projects/aspen-greens-@-the-prestige-city-logo.png"
 import AspenModal from "./AspenModal";
+import BrochureModals from "../Includes/BrochureModals";
 
 const AspenSlider = () => {
 
@@ -103,7 +104,7 @@ const AspenSlider = () => {
                   <Button
                     variant="primary"
                     onClick={handleShow}
-                    className="my-1"
+                    className="my-1 text-white"
                   >
                     Download Brouchure
                   </Button>
@@ -115,7 +116,7 @@ const AspenSlider = () => {
       </Container>
     </div>
 
-    <AspenModal
+    <BrochureModals
       show={show}
       handleClose={handleClose}
       title="Download Brouchure"

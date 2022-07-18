@@ -17,6 +17,7 @@ import image3 from "../../images/slider/avalon-park/avalon-park-2.png";
 import image4 from "../../images/slider/aspen-greens/aspen-greens-3.png";
 import image5 from "../../images/slider/the-great-acres/the-great-acres-4.png";
 import Modals from "./Modals";
+import BrochureModals from "./BrochureModals";
 
 const TopHeader = () => {
   const [show, setShow] = useState(false);
@@ -25,7 +26,7 @@ const TopHeader = () => {
 
   return (
     <div className="sticky-top" id="navbar">
-      <div id="top-header" className="p-2 p-md-1 bg-dark">
+      {/* <div id="top-header" className="p-2 p-md-1 bg-dark">
         <Container>
           <Row className="justify-content-center">
             <Col
@@ -58,7 +59,7 @@ const TopHeader = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
       <Navbar
         collapseOnSelect
         expand="lg"
@@ -157,7 +158,7 @@ const TopHeader = () => {
                           >
                             <Image className="img-fluid" alt="" src={image2} />
                             <span className="position-absolute top-0 end-0 badge rounded-pill bg-danger m-1 pill-custom">
-                              New Launch
+                            Under Construction
                             </span>
                             <p className="text-dark m-0 py-2 text-primary text-center">
                               1BHK & 2BHK Bed Apartments
@@ -182,7 +183,7 @@ const TopHeader = () => {
                           >
                             <Image className="img-fluid" alt="" src={image3} />
                             <span className="position-absolute top-0 end-0 badge rounded-pill bg-danger m-1 pill-custom">
-                              Sold Out
+                              Under Construction
                             </span>
                             <p className="text-dark m-0 py-2 text-primary text-center">
                               3BHK & 4BHK Apartments
@@ -207,7 +208,7 @@ const TopHeader = () => {
                           >
                             <Image className="img-fluid" alt="" src={image4} />
                             <span className="position-absolute top-0 end-0 badge rounded-pill bg-danger m-1 pill-custom">
-                              New Launch
+                            Under Construction
                             </span>
                             <p className="text-dark m-0 py-2 text-primary text-center">
                               4BHK Villas
@@ -231,7 +232,7 @@ const TopHeader = () => {
                           <div className="position-relative">
                             <Image className="img-fluid" alt="" src={image5} />
                             <span className="position-absolute top-0 end-0 badge rounded-pill bg-danger m-1 pill-custom">
-                              New Launch
+                              Sold Out
                             </span>
                             <p className="text-dark m-0 py-2 text-primary text-center">
                               Plots
@@ -246,7 +247,7 @@ const TopHeader = () => {
 
               <Nav.Link href="#master-plan">Master Plan</Nav.Link>
               <Nav.Link href="#pricing">Pricing</Nav.Link>
-              <Nav.Link href="#virtual-tour">Virtual Tour</Nav.Link>
+              {/* <Nav.Link href="#virtual-tour">Virtual Tour</Nav.Link> */}
               <Nav.Link as={Link} to="/blogs">blogs</Nav.Link>
             </Nav>
             {/* <Nav>
@@ -260,10 +261,11 @@ const TopHeader = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Modals
+      <BrochureModals
         show={show}
         handleClose={handleClose}
         title="Download Brochure"
+        message="Please Fill in your details & Download the Complete Brochure"
         projectid="57a99891-ec20-472a-b230-187e20fee71f"
       />
     </div>

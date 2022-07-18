@@ -10,11 +10,12 @@ import TopHeader from './Components/Includes/TopHeader';
 import Footer from './Components/Includes/Footer';
 import Blogs from './Components/Home/Blogs';
 import Success from './Components/Home/Success';
+import PrivacyPolicy from './Components/Includes/PrivacyPolicy';
 
 function App() {
   return (
     <Router>
-        <TopHeader />
+        {/* <TopHeader /> */}
         <Routes>
           <Route path="/" index element={<Home />}></Route>
           <Route path="/projects/avalon-park" element={<AvalonPark />}></Route>
@@ -23,6 +24,7 @@ function App() {
           <Route path="/projects/eden-park" element={<EdenPark />}></Route>
           <Route path="/projects/meridian-park" element={<MeridianPark />}></Route>
           <Route path="/blogs" element={<Blogs />}></Route>
+          <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
           <Route path="/success" element={<Success />}></Route>
         </Routes>  
         <Footer />

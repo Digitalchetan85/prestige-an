@@ -7,6 +7,7 @@ import Image1 from "../../images/slider/eden-park/eden-park-1.png";
 import Image2 from "../../images/slider/eden-park/eden-park-2.png";
 import Logo from "../../images/projects/eden-park-@-the-prestige-city-logo.png"
 import EdenModal from "./EdenModal";
+import BrochureModals from "../Includes/BrochureModals";
 
 
 const EdenSlider = () => {
@@ -101,7 +102,7 @@ const EdenSlider = () => {
                   <Button
                     variant="primary"
                     onClick={handleShow}
-                    className="my-1"
+                    className="my-1 text-white"
                   >
                     Download Brouchure
                   </Button>
@@ -113,7 +114,7 @@ const EdenSlider = () => {
       </Container>
     </div>
 
-    <EdenModal
+    <BrochureModals
       show={show}
       handleClose={handleClose}
       title="Download Brouchure"
