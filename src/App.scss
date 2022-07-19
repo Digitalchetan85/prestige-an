@@ -217,6 +217,13 @@ $dark-color: #001524;
   z-index: 0;
 }
 
+// Country Flag CSS
+
+.selected-flag:hover{
+  background: none !important;
+}
+
+
 .form-control:focus {
   box-shadow: none !important;
 }

@@ -6,6 +6,8 @@ import axios from "axios";
 import CountryDropdown from "country-dropdown-with-flags-for-react";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
+import IntlTelInput from 'react-intl-tel-input';
+import 'react-intl-tel-input/dist/main.css';
 
 const Contact = () => {
   const [formStatus, setformStatus] = useState("");
@@ -132,7 +134,7 @@ const Contact = () => {
                   <Col md={12}>
                     <div className="mb-2">
                       <InputGroup className="mb-3" style={{ height: "50px" }}>
-                        <InputGroup.Text id="basic-addon1">
+                        {/* <InputGroup.Text id="basic-addon1">
                           <i className="fa fa-phone-volume text-primary"></i>
                         </InputGroup.Text>
                         <Field
@@ -143,6 +145,11 @@ const Contact = () => {
                           id="phone"
                           name="phone"
                           placeholder="Phone"
+                        /> */}
+                        <IntlTelInput
+                          style={{ width: '100%' }}
+                          containerClassName="intl-tel-input"
+                          inputClassName="form-control"
                         />
                       </InputGroup>
                     </div>
