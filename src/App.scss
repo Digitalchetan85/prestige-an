@@ -2,11 +2,11 @@
 
 /* make the customizations */
 $theme-colors: (
-  "primary": #B8923F,
+  "primary": #b8923f,
   "secondary": #6c757d,
   "dark": #343a40,
   "success": #28a745,
-  "info": #E1D1AD,
+  "info": #e1d1ad,
   "warning": #ffc107,
   "danger": #dc3545,
   "light": #f8f9fa,
@@ -15,11 +15,11 @@ $theme-colors: (
 /* import bootstrap to set changes */
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-$primary-color: #B8923F;
-$secondary-color: #E1D1AD;
+$primary-color: #b8923f;
+$secondary-color: #e1d1ad;
 $white-color: white;
 $black-color: #000;
-$tertiary-color: #9D9E9E;
+$tertiary-color: #9d9e9e;
 $dark-color: #001524;
 
 // p {
@@ -32,7 +32,6 @@ $dark-color: #001524;
   }
 }
 
-
 #navbar {
   .nav-link {
     padding: 0px 25px;
@@ -44,17 +43,17 @@ $dark-color: #001524;
     &:hover {
       color: $primary-color;
     }
-    &:last-child{
+    &:last-child {
       border-right: 0px;
     }
   }
-  .nav-item{
+  .nav-item {
     border-right: 1px solid $secondary-color;
   }
-  .menu-area{
+  .menu-area {
     position: static;
   }
-  .mega-area{
+  .mega-area {
     position: absolute;
     width: 80%;
     left: 10%;
@@ -62,20 +61,19 @@ $dark-color: #001524;
     bottom: 10%;
     padding: 15px;
   }
-  .dropdown-menu{
+  .dropdown-menu {
     left: 10%;
   }
-  .col-md-3{
+  .col-md-3 {
     width: 20%;
   }
   .dropdown:hover {
     display: block;
   }
   .dropdown-menu[data-bs-popper] {
-    top:85% !important;
+    top: 85% !important;
   }
 }
-
 
 #side-contact-form {
   .stickyForm {
@@ -119,7 +117,8 @@ $dark-color: #001524;
       }
     }
     input[type="text"],
-    input[type="email"],input[type="tel"] {
+    input[type="email"],
+    input[type="tel"] {
       width: 100% !important;
       border: 0;
       height: 35px;
@@ -142,7 +141,6 @@ $dark-color: #001524;
   }
 }
 
-
 #master-plan {
   .nav-link {
     color: $black-color !important;
@@ -164,11 +162,10 @@ $dark-color: #001524;
   z-index: 1;
 }
 
-
-#cre{
+#cre {
   .btn-close {
     color: $white-color !important;
-  } 
+  }
 }
 
 #custom-content {
@@ -180,7 +177,7 @@ $dark-color: #001524;
   z-index: 0;
   .form-control {
     border-radius: 0px;
-    border-top:0px;
+    border-top: 0px;
     border-right: 0px;
     border-left: 0px;
     border-color: $primary-color;
@@ -188,17 +185,21 @@ $dark-color: #001524;
   .input-group-text {
     background-color: white;
     border-radius: 0px;
-    border-top:0px;
+    border-top: 0px;
     border-right: 0px;
     border-left: 0px;
     border-color: $primary-color;
   }
-
+  .intl-tel-input {
+    .flag-container {
+      bottom: 12px !important;
+    }
+  }
 }
 #form-setting {
   .form-control {
     border-radius: 0px;
-    border-top:0px;
+    border-top: 0px;
     border-right: 0px;
     border-left: 0px;
     border-color: $primary-color;
@@ -206,7 +207,7 @@ $dark-color: #001524;
   .input-group-text {
     background-color: white;
     border-radius: 0px;
-    border-top:0px;
+    border-top: 0px;
     border-right: 0px;
     border-left: 0px;
     border-color: $primary-color;
@@ -219,10 +220,9 @@ $dark-color: #001524;
 
 // Country Flag CSS
 
-.selected-flag:hover{
+.selected-flag:hover {
   background: none !important;
 }
-
 
 .form-control:focus {
   box-shadow: none !important;
@@ -255,17 +255,16 @@ p {
 
 #pricing {
   .nav-link {
-      color: $black-color !important;
+    color: $black-color !important;
     &.active {
       color: $black-color !important;
     }
   }
 }
 
-
-@include media-breakpoint-only(xs) { 
+@include media-breakpoint-only(xs) {
   #navbar {
-    .col-md-3{
+    .col-md-3 {
       width: 100%;
     }
   }
@@ -273,28 +272,29 @@ p {
     font-size: 12px !important;
   }
   li {
-    font-size:12px !important;
+    font-size: 12px !important;
   }
   #overview {
-    td, th {
+    td,
+    th {
       font-size: 12px !important;
     }
   }
   #pricing {
     .custom-button {
-      font-size:11px !important;
+      font-size: 11px !important;
     }
     td {
-      font-size:12px !important;
+      font-size: 12px !important;
     }
     th {
-      font-size:14px !important;
+      font-size: 14px !important;
     }
   }
   #custom-content {
     .container {
       position: static !important;
-      transform: translate(0)!important;
+      transform: translate(0) !important;
     }
     .shadow {
       box-shadow: none !important;
@@ -309,29 +309,33 @@ p {
       font-size: 10px !important;
     }
   }
- }
-@include media-breakpoint-only(sm) { 
+}
+@include media-breakpoint-only(sm) {
   #navbar {
-    .col-md-3{
+    .col-md-3 {
       width: 100%;
     }
   }
   #pricing {
     .custom-button {
-      font-size:12px !important;
+      font-size: 12px !important;
     }
     td {
-      font-size:12px !important;
+      font-size: 12px !important;
     }
     th {
-      font-size:14px !important;
+      font-size: 14px !important;
     }
   }
- }
-@include media-breakpoint-only(md) {  }
-@include media-breakpoint-only(lg) {  }
-@include media-breakpoint-only(xl) {  }
-@include media-breakpoint-only(xxl) {  }
+}
+@include media-breakpoint-only(md) {
+}
+@include media-breakpoint-only(lg) {
+}
+@include media-breakpoint-only(xl) {
+}
+@include media-breakpoint-only(xxl) {
+}
 
 // .country-select {
 //   width:100% !important;
