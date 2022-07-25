@@ -23,9 +23,9 @@ const EdenParkPlans = () => {
     { id: 6, imgName: Image4, alt: "", tag: "Type A4 - 649Sq.ft" },
     { id: 7, imgName: Image5, alt: "", tag: "Type A5 - 666Sq.ft" },
     { id: 8, imgName: Image6, alt: "", tag: "Type A3 - 643Sq.ft" },
-    { id: 8, imgName: Image7, alt: "", tag: "Type B1 - 944Sq.ft" },
-    { id: 8, imgName: Image8, alt: "", tag: "Type B2 - 971Sq.ft" },
-    { id: 8, imgName: Image9, alt: "", tag: "Type B3 - 974Sq.ft" },
+    { id: 9, imgName: Image7, alt: "", tag: "Type B1 - 944Sq.ft" },
+    { id: 10, imgName: Image8, alt: "", tag: "Type B2 - 971Sq.ft" },
+    { id: 11, imgName: Image9, alt: "", tag: "Type B3 - 974Sq.ft" },
   ];
 
   return (

@@ -44,7 +44,7 @@ const Pricing = () => {
                         onClick={handleShow}
                         className="custom-button text-white"
                       >
-                        <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                        <i className="fa fa-spinner fa-flip fa-download"></i>
                         Price Sheet
                       </Button>
                     </td>
@@ -61,11 +61,11 @@ const Pricing = () => {
                         onClick={handleShow}
                         className="custom-button text-white"
                       >
-                        <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                        <i className="fa fa-spinner fa-flip fa-download"></i>
                         Price Sheet
                       </Button>
                     </td>
-                  </tr>{" "}
+                  </tr>
                   <tr>
                     <td>
                       3 BHK 
@@ -78,7 +78,7 @@ const Pricing = () => {
                         onClick={handleShow}
                         className="custom-button text-white"
                       >
-                        <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                        <i className="fa fa-spinner fa-flip fa-download"></i>
                         Price Sheet
                       </Button>
                     </td>
@@ -95,7 +95,7 @@ const Pricing = () => {
                         onClick={handleShow}
                         className="custom-button text-white"
                       >
-                        <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                        <i className="fa fa-spinner fa-flip fa-download"></i>
                         Price Sheet
                       </Button>
                     </td>
@@ -131,7 +131,7 @@ const Pricing = () => {
                         onClick={handleShow}
                         className="custom-button text-white"
                       >
-                        <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                        <i className="fa fa-spinner fa-flip fa-download"></i>
                         Price Sheet
                       </Button>
                     </td>
@@ -167,7 +167,7 @@ const Pricing = () => {
                         onClick={handleShow}
                         className="custom-button"
                       >
-                        <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                        <i className="fa fa-spinner fa-flip fa-download"></i>
                         Sold Out
                       </Button>
                     </td>
@@ -184,11 +184,11 @@ const Pricing = () => {
                         onClick={handleShow}
                         className="custom-button"
                       >
-                        <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                        <i className="fa fa-spinner fa-flip fa-download"></i>
                         Sold Out
                       </Button>
                     </td>
-                  </tr>{" "}
+                  </tr>
                   <tr>
                     <td>
                       60 X 50
@@ -201,7 +201,7 @@ const Pricing = () => {
                         onClick={handleShow}
                         className="custom-button text-white"
                       >
-                        <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                        <i className="fa fa-spinner fa-flip fa-download"></i>
                         Price Sheet
                       </Button>
                     </td>
@@ -218,7 +218,7 @@ const Pricing = () => {
                         onClick={handleShow}
                         className="custom-button text-white"
                       >
-                        <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                        <i className="fa fa-spinner fa-flip fa-download"></i>
                         Price Sheet
                       </Button>
                     </td>
@@ -235,7 +235,7 @@ const Pricing = () => {
                         onClick={handleShow}
                         className="custom-button text-white"
                       >
-                        <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                        <i className="fa fa-spinner fa-flip fa-download"></i>
                         Price Sheet
                       </Button>
                     </td>

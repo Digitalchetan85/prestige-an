@@ -134,7 +134,7 @@ const MainSlider = () => {
                 <Col md={8} className="">
                   <div className="text-start text-md-start">
                     <h1 className="text-primary fs-4">The Prestige City</h1>
-                    <p className="m-0 fw-bold text-start text-md-start">
+                    <div className="m-0 fw-bold text-start text-md-start">
                       <p className=" text-start text-md-start mb-0 fs-6">
                         Sarjapur Main Road, Bangalore
                       </p>
@@ -144,7 +144,7 @@ const MainSlider = () => {
                       <p className=" text-start text-md-start mb-0 fs-6">
                         Price Starts from 39L* to 6Cr*
                       </p>
-                    </p>
+                    </div>
                   </div>
                 </Col>
                 {/* <Col md={6} xs={6} className="align-self-center">

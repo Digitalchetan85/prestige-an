@@ -147,6 +147,7 @@ const Contact = () => {
                           placeholder="Phone"
                         /> */}
                         <IntlTelInput
+                          preferredCountries={['in']}
                           style={{ width: '100%' }}
                           containerClassName="intl-tel-input"
                           inputClassName="form-control"
