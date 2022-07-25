@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import {  Col, Container, Row } from "react-bootstrap";
 import About from "../Includes/AboutDeveloper";
 import Amenities from "../Includes/Amenities";
 import Contact from "../Includes/Contact";
@@ -11,7 +11,7 @@ import Pricing from "../Includes/Pricing";
 import Projects from "../Includes/Projects";
 import VirtualTour from "../Includes/VirtualTour";
 import { Helmet } from "react-helmet";
-import Contact1 from "../Includes/Contact1";
+// import Contact1 from "../Includes/Contact1";
 import Info from "../Includes/Info";
 import TopHeader from "../Includes/TopHeader";
 

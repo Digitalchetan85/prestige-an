@@ -15,6 +15,7 @@ import Logo from "../../images/logo-1.png";
 import { Link, useNavigate } from "react-router-dom";
 import CountryDropdown from "country-dropdown-with-flags-for-react";
 import logo from "../../images/logo-2.png";
+import IntlTelInput from "react-intl-tel-input";
 
 const BrochureModals = (props) => {
   const [formStatus, setformStatus] = useState("");
@@ -151,7 +152,7 @@ const BrochureModals = (props) => {
                     <Col md={12}>
                       <div className="mb-2">
                         <InputGroup className="mb-3">
-                          <InputGroup.Text id="basic-addon1">
+                          {/* <InputGroup.Text id="basic-addon1">
                             <i className="fa fa-phone-volume text-primary"></i>
                           </InputGroup.Text>
                           <Field
@@ -162,7 +163,13 @@ const BrochureModals = (props) => {
                             id="phone"
                             name="phone"
                             placeholder="Phone"
-                          />
+                          /> */}
+                          <IntlTelInput
+                          preferredCountries={['in']}
+                          style={{ width: '100%' }}
+                          containerClassName="intl-tel-input"
+                          inputClassName="form-control"
+                        />
                         </InputGroup>
                       </div>
                     </Col>

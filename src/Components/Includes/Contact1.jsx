@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field } from "formik";
 import { Button, InputGroup } from "react-bootstrap";
 import CountryDropdown from "country-dropdown-with-flags-for-react";
+import IntlTelInput from "react-intl-tel-input";
 
 const Contact1 = () => (
   <div>
@@ -80,7 +81,7 @@ const Contact1 = () => (
           </InputGroup>
 
           <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon1">
+            {/* <InputGroup.Text id="basic-addon1">
               <i className="fa fa-phone-volume text-primary"></i>
             </InputGroup.Text>
             <Field
@@ -91,7 +92,13 @@ const Contact1 = () => (
               name="phone"
               placeholder="Phone"
               className="form-control"
-            />
+            /> */}
+            <IntlTelInput
+                          preferredCountries={['in']}
+                          style={{ width: '100%' }}
+                          containerClassName="intl-tel-input"
+                          inputClassName="form-control"
+                        />
           </InputGroup>
           {errors.phone && touched.phone && errors.phone}
           <Button type="submit" disabled={isSubmitting}>

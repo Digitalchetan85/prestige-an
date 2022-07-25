@@ -6,6 +6,7 @@ import axios from "axios";
 import Logo from "../../images/logo-1.png";
 import { useNavigate } from "react-router-dom";
 import CountryDropdown from "country-dropdown-with-flags-for-react";
+import IntlTelInput from "react-intl-tel-input";
 
 const ContactModal = (props) => {
   const [formStatus, setformStatus] = useState("");
@@ -144,10 +145,13 @@ const ContactModal = (props) => {
                     <Col md={12}>
                       <div className="mb-2">
                         <InputGroup className="mb-3">
-                          <InputGroup.Text id="basic-addon1">
-                            <i className="fa fa-phone-volume text-primary"></i>
-                          </InputGroup.Text>
-                          <Field
+                        <IntlTelInput
+                          preferredCountries={['in']}
+                          style={{ width: '100%' }}
+                          containerClassName="intl-tel-input"
+                          inputClassName="form-control"
+                        />
+                          {/* <Field
                             className="form-control"
                             type="tel"
                             aria-label="Username"
@@ -155,7 +159,7 @@ const ContactModal = (props) => {
                             id="phone"
                             name="phone"
                             placeholder="Phone"
-                          />
+                          /> */}
                         </InputGroup>
                       </div>
                     </Col>
