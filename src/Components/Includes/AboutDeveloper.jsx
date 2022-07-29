@@ -11,7 +11,7 @@ const About = () => {
   useEffect(() => {
     setTimeout(function () {
       setShow(true);
-    }, 60000);
+    }, 1000);
   }, []);
 
   return (
@@ -45,7 +45,8 @@ const About = () => {
         show={show}
         handleClose={handleClose}
         message="Please fill in your details & save your time. We will contact you Now!!!"
-        title="Need Help?"
+        title="Get Instant Callback"
+        utitle="Need Help?"
       />
     </div>
   );

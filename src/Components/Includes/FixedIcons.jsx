@@ -20,7 +20,7 @@ const FixedIcons = () => {
             </div>
             <div className="my-5">
               <a
-                href="https://wa.me/918095999000?text='Hi! I'm Interested In Prsetige City Projects, Bangalore. Please Share Details.'"
+                href="https://wa.me/918095999000?text='Hi! I'm Interested In Prestige City Projects, Bangalore. Please Share Details.'"
                 target="_blank"
                 className="bg-primary p-3 rounded-circle m-2"
               >

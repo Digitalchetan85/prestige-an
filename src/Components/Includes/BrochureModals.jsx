@@ -7,8 +7,8 @@ import {
   Image,
   InputGroup,
   Container,
+  Form,
 } from "react-bootstrap";
-import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import Logo from "../../images/logo-1.png";
@@ -18,28 +18,37 @@ import logo from "../../images/logo-2.png";
 import IntlTelInput from "react-intl-tel-input";
 
 const BrochureModals = (props) => {
+  const initialValues = { name: "", email: "", phone: "" };
   const [formStatus, setformStatus] = useState("");
+  const [display, setDisplay] = useState(false);
+  const [values, setValues] = useState(initialValues);
+  const [Loading, setLoading] = useState(false);
+  const [CustomError, setCustomError] = useState(false);
+  const [FormErrors, setFormErrors] = useState({
+    phone: "",
+    email: "",
+    name: "",
+  });
   const [Download, setDownload] = useState(false);
   const navigate = useNavigate("/success");
 
-  const initialValues = {
-    name: "",
-    phone: "",
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+    console.log("values", values);
   };
 
-  const phoneRegExp =
-    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+  const handlePhoneChange = (status, phoneNumber, country) => {
+    setValues({ ...values, phone: phoneNumber });
+  };
 
-  const validationSchema = Yup.object({
-    name: Yup.string().required("Required"),
-    phone: Yup.string()
-      .required("Required")
-      .matches(phoneRegExp, "Phone No is not valid")
-      .min(10, "Phone No Minimum 10 Digits")
-      .max(10, "Phone No Minimum 10 Digits"),
-  });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormErrors(validate(values));
+    console.log(values);
 
-  const onSubmit = (values) => {
+    setformStatus("Click below button to download the Brochure.");
+    setDownload(true);
     const data = {
       apikey: "897ec314-c85b-4291-96ee-48648d5dcfbd",
       firstname: values.name,
@@ -56,8 +65,6 @@ const BrochureModals = (props) => {
       .post("https://buildeskapi.azurewebsites.net/api/Webhook", data)
       .then(function (response) {
         if (response.data.Success) {
-          setformStatus("Click below button to download the Brochure.");
-          setDownload(true);
         } else {
           setformStatus("Sorry!!! Something went wrong. Please try again");
         }
@@ -66,6 +73,33 @@ const BrochureModals = (props) => {
         setformStatus("Sorry!!! Something went wrong. Please try again");
       });
   };
+
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    const phoneRegExp =
+      /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+    if (!values.name) {
+      errors.name = "Required";
+    }
+    if (!values.email) {
+      errors.email = "Required";
+    }
+    if (!values.phone) {
+      errors.phone = "Required";
+    } else if (!phoneRegExp.test(values.phone)) {
+      errors.phone = "Must be a valid phone number";
+    }
+    return errors;
+  };
+
+  // useEffect(() => {
+  //   console.log("errors", FormErrors);
+  //   if (Object.keys(FormErrors).length > 0) {
+  //     console.log("values", values);
+  //   }
+  // }, [FormErrors]);
+
   return (
     <div>
       <Modal show={props.show} onHide={props.handleClose} centered id="cre">
@@ -119,104 +153,91 @@ const BrochureModals = (props) => {
               <p className="text-center" style={{ fontWeight: "600" }}>
                 Register Here And Avail The Best Offers!!
               </p>
-              <Formik
-                initialValues={initialValues}
-                validationSchema={validationSchema}
-                onSubmit={onSubmit}
-              >
-                <Form className="py-1 rounded">
-                  <Row className="mb-2">
-                    <Col md={12}>
-                      <div className="mb-2">
-                        <InputGroup className="mb-3">
-                          <InputGroup.Text id="basic-addon1">
-                            <i className="fa fa-user text-primary"></i>
-                          </InputGroup.Text>
-                          <Field
-                            className="form-control"
-                            type="text"
-                            aria-label="Username"
-                            aria-describedby="basic-addon1"
-                            id="name"
-                            name="name"
-                            placeholder="Name"
-                          />
-                        </InputGroup>
+              <Form className="py-1 rounded" onSubmit={handleSubmit}>
+                <Row className="mb-2">
+                  <Col md={12}>
+                    <div className="mb-2">
+                      <InputGroup className="mb-3rounded">
+                        <InputGroup.Text id="basic-addon1" className="bg-white">
+                          <i className="fa fa-user text-primary"></i>
+                        </InputGroup.Text>
+                        <Form.Control
+                          className="form-control"
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder="Name*"
+                          value={values.name}
+                          onChange={handleChange}
+                        />
+                      </InputGroup>
+                      <small className="text-danger">{FormErrors.name}</small>
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="mb-2">
+                  <Col md={12}>
+                    <div className="mb-2">
+                      <IntlTelInput
+                        preferredCountries={["in"]}
+                        style={{ width: "100%", height: "50px" }}
+                        containerClassName="intl-tel-input"
+                        inputClassName="form-control"
+                        input
+                        type="tel"
+                        placeholder="9876543210"
+                        name="phoneNumber"
+                        id="phoneNumber"
+                        value={values.phoneNumber}
+                        onPhoneNumberChange={handlePhoneChange}
+                      />
+                      <small className="text-danger">{FormErrors.phone}</small>
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="">
+                  <Col md={12}>
+                    {formStatus ? (
+                      <div className="alert alert-success p-3 text-center">
+                        {formStatus}
                       </div>
-                    </Col>
-                    <small className="text-danger">
-                      <ErrorMessage name="name" />
-                    </small>
-                  </Row>
-                  <Row className="mb-2">
-                    <Col md={12}>
-                      <div className="mb-2">
-                        <InputGroup className="mb-3">
-                          <InputGroup.Text id="basic-addon1">
-                            <i className="fa fa-phone-volume text-primary"></i>
-                          </InputGroup.Text>
-                          <Field
-                            className="form-control"
-                            type="tel"
-                            aria-label="Username"
-                            aria-describedby="basic-addon1"
-                            id="phone"
-                            name="phone"
-                            placeholder="Phone"
-                          />
-                          {/* <IntlTelInput
-                          preferredCountries={['in']}
-                          style={{ width: '100%' }}
-                          containerClassName="intl-tel-input"
-                          inputClassName="form-control"
-                        /> */}
-                        </InputGroup>
-                      </div>
-                    </Col>
-                    <small className="text-danger">
-                      <ErrorMessage name="phone" />
-                    </small>
-                  </Row>
-                  <Row className="">
-                    <Col md={12}>
-                      {formStatus ? (
-                        <div className="alert alert-success p-3 text-center">
-                          {formStatus}
-                        </div>
-                      ) : null}
-                    </Col>
-                  </Row>
-                  <Row className="mb-3">
-                    <Col md={12}>
-                      <div className="text-center">
-                        {Download ? (
-                          <a
-                            className="btn btn-primary text-white px-5"
-                            style={{ fontWeight: "600" }}
-                            href="https://theprestigecitysarjapur.com/prestige-meridian-park.pdf"
-                            target="_blank"
-                          >
-                            Download Now
-                          </a>
-                        ) : (
-                          <Button
-                            className="btn btn-primary text-white px-5"
-                            style={{ fontWeight: "600" }}
-                            type="submit"
-                          >
-                            Download Brouchure
-                          </Button>
-                        )}
-                      </div>
-                    </Col>
-                  </Row>
-                </Form>
-              </Formik>
+                    ) : null}
+                  </Col>
+                </Row>
+                <Row className="mb-3">
+                  <Col md={12}>
+                    <div className="text-center">
+                      {Download ? (
+                        <a
+                          className="btn btn-primary text-white px-5"
+                          style={{ fontWeight: "600" }}
+                          href="https://theprestigecitysarjapur.com/prestige-meridian-park.pdf"
+                          target="_blank"
+                        >
+                          Download Now
+                        </a>
+                      ) : (
+                        <Button
+                          className="btn btn-primary text-white px-5"
+                          style={{ fontWeight: "600" }}
+                          type="submit"
+                        >
+                          Download Brouchure
+                        </Button>
+                      )}
+                    </div>
+                  </Col>
+                </Row>
+              </Form>
             </div>
           </div>
         </Modal.Body>
         <Modal.Footer className="bg-primary py-1 justify-content-center">
-          <a href="tel:08095999000" className="text-white text-decoration-none" style={{ fontWeight: "600" }}>
+          <a
+            href="tel:08095999000"
+            className="text-white text-decoration-none"
+            style={{ fontWeight: "600" }}
+          >
             <i className="fa fa-phone-volume text-white pe-2"></i>+91 80959
             99000
           </a>

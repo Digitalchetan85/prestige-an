@@ -83,7 +83,7 @@ const MeridianPark = () => {
                         <Row>
                           <Col md={12}>
                             <h2 className="py-2 text-center text-primary fs-3">
-                              Prestige Smart City - Meridian Park
+                              Prestige City - Meridian Park
                             </h2>
                             <p>
                               <a

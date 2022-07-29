@@ -105,7 +105,7 @@ const MeridianSlider = () => {
               <Row className="">
                 <Col md={8} className="">
                   <div className="m-1 text-start text-md-start">
-                    <h1 className="text-primary fs-4">
+                    <h1 className="text-primary fs-5">
                       Meridian Park @ The Prestige City
                     </h1>
                     <p className="m-0 fw-bold text-start text-md-start">

@@ -249,7 +249,8 @@ const Pricing = () => {
       <Modals
         show={show}
         handleClose={handleClose}
-        title="Submit"
+        title="Download Price Sheet"
+        utitle=""
         projectid="57a99891-ec20-472a-b230-187e20fee71f"
       />
     </div>

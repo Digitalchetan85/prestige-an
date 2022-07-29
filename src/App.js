@@ -11,6 +11,7 @@ import Footer from './Components/Includes/Footer';
 import Blogs from './Components/Home/Blogs';
 import Success from './Components/Home/Success';
 import PrivacyPolicy from './Components/Includes/PrivacyPolicy';
+import FormTest from './Components/Includes/FormTest';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/blogs" element={<Blogs />}></Route>
           <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
           <Route path="/success" element={<Success />}></Route>
+          <Route path="/form" element={<FormTest />}></Route>
         </Routes>  
         <Footer />
     </Router>
