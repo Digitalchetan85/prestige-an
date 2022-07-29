@@ -15,7 +15,7 @@ import PrivacyPolicy from './Components/Includes/PrivacyPolicy';
 function App() {
   return (
     <Router>
-        {/* <TopHeader /> */}
+        <TopHeader />
         <Routes>
           <Route path="/" index element={<Home />}></Route>
           <Route path="/projects/avalon-park" element={<AvalonPark />}></Route>

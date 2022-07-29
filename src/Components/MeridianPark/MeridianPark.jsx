@@ -38,13 +38,10 @@ const MeridianPark = () => {
 
       <div className="">
         <Container fluid>
-          <Row>
-            <Col md={9} className="ps-md-0 pe-md-0">
-              <TopHeader />
               <MeridianSlider />
               <Container fluid>
                 <Row>
-                  <Col md={12}>
+                  <Col md={8}>
                     <div id="overview" className="py-3 py-md-5">
                       <Container fluid className="ps-0 pe-0">
                         <Row>
@@ -169,41 +166,43 @@ const MeridianPark = () => {
                         </Row>
                       </Container>
                     </div>
+                    <div className="py-3 py-md-5" id="pricing">
+                      <Container fluid className="ps-0 pe-0">
+                        <Row className="ms-0 me-0">
+                          <Col md={8}>
+                            <MeridianPrice />
+                          </Col>
+                          <Col md={4}>
+                            <div className="sticky-top" id="contact1">
+                              <div className="text-center">
+                                <h4 className="text-primary">
+                                  Download Pricesheet
+                                </h4>
+                                <Image
+                                  src={Costsheet}
+                                  alt=""
+                                  onClick={handleShow}
+                                  className="img-fluid"
+                                  style={{ filter: "blur(2px)" }}
+                                ></Image>
+                              </div>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </div>
+                  </Col>
+                  <Col md={4}>
+                    <div id="contact" className="sticky-top py-md-5 my-md-5">
+                      <Contact />
+                    </div>
                   </Col>
                 </Row>
               </Container>
 
-              <div className="py-3 py-md-5" id="pricing">
-                <Container fluid className="ps-0 pe-0">
-                  <Row className="ms-0 me-0">
-                    <Col md={8}>
-                      <MeridianPrice />
-                    </Col>
-                    <Col md={4}>
-                      <div className="sticky-top" id="contact1">
-                        <div className="text-center">
-                          <h4 className="text-primary">Download Pricesheet</h4>
-                          <Image
-                            src={Costsheet}
-                            alt=""
-                            onClick={handleShow}
-                            className="img-fluid"
-                            style={{ filter: "blur(2px)" }}
-                          ></Image>
-                        </div>
-                      </div>
-                    </Col>
-                  </Row>
-                </Container>
-              </div>
               <VirtualTour />
               <OtherProjectsMeridian />
               <About />
-            </Col>
-            <Col md={3}>
-              <Contact />
-            </Col>
-          </Row>
         </Container>
       </div>
 

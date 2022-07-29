@@ -29,13 +29,10 @@ const AvalonPark = () => {
       </Helmet>
       <div className="">
         <Container fluid>
-          <Row>
-            <Col md={9} className="ps-md-0 pe-md-0">
-              <TopHeader />
               <AvalonSlider />
               <Container fluid>
                 <Row>
-                  <Col md={12}>
+                  <Col md={8}>
                     <div id="overview" className="py-3 py-md-5">
                       <Container fluid className="ps-0 pe-0">
                         <Row>
@@ -143,15 +140,15 @@ const AvalonPark = () => {
                       </Container>
                     </div>
                   </Col>
+                  <Col md={4}>
+                    <div className="sticky-top py-md-5" id="contact">
+                      <Contact />
+                    </div>
+                  </Col>
                 </Row>
               </Container>
               <OtherProjectsAvalon />
               <About />
-            </Col>
-            <Col md={3}>
-              <Contact />
-            </Col>
-          </Row>
         </Container>
       </div>
       <FixedIcons />

@@ -29,13 +29,10 @@ const AspenGreens = () => {
       </Helmet>
       <div className="">
         <Container fluid>
-          <Row>
-            <Col md={9} className="ps-md-0 pe-md-0">
-              <TopHeader />
               <AspenSlider />
               <Container fluid>
                 <Row>
-                  <Col md={12} className="bg-light">
+                  <Col md={8} className="bg-light">
                     <div id="overview" className="py-3 py-md-5">
                       <Container fluid className="ps-0 pe-0">
                         <Row>
@@ -159,15 +156,15 @@ const AspenGreens = () => {
                       </Container>
                     </div>
                   </Col>
+                  <Col md={4}>
+                    <div id="contact" className="py-md-5 my-md-5 sticky-top">
+                      <Contact />
+                    </div>
+                  </Col>
                 </Row>
               </Container>
               <OtherProjectsAspen />
               <About />
-            </Col>
-            <Col md={3}>
-              <Contact />
-            </Col>
-          </Row>
         </Container>
       </div>
       <FixedIcons />

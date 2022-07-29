@@ -145,13 +145,16 @@ const ContactModal = (props) => {
                     <Col md={12}>
                       <div className="mb-2">
                         <InputGroup className="mb-3">
-                        <IntlTelInput
+                        <InputGroup.Text id="basic-addon1">
+                            <i className="fa fa-phone-volume text-primary"></i>
+                          </InputGroup.Text>
+                        {/* <IntlTelInput
                           preferredCountries={['in']}
                           style={{ width: '100%' }}
                           containerClassName="intl-tel-input"
                           inputClassName="form-control"
-                        />
-                          {/* <Field
+                        /> */}
+                          <Field
                             className="form-control"
                             type="tel"
                             aria-label="Username"
@@ -159,7 +162,7 @@ const ContactModal = (props) => {
                             id="phone"
                             name="phone"
                             placeholder="Phone"
-                          /> */}
+                          />
                         </InputGroup>
                       </div>
                     </Col>
@@ -184,7 +187,7 @@ const ContactModal = (props) => {
                           style={{ fontWeight: "600" }}
                           type="submit"
                         >
-                          Request for Call back
+                          {props.title}
                         </Button>
                       </div>
                     </Col>

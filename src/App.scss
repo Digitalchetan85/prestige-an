@@ -174,13 +174,16 @@ $dark-color: #001524;
 
 #contact {
   // top: 110px !important;
-  z-index: 0;
+  form {
+    background-image: url(../src/images/bg-image.png);
+  }
+  z-index: 1;
   .form-control {
     border-radius: 0px;
     border-top: 0px;
     border-right: 0px;
     border-left: 0px;
-    border-color: $primary-color;
+    border-bottom: 0px;
   }
   .input-group-text {
     background-color: white;
@@ -188,11 +191,11 @@ $dark-color: #001524;
     border-top: 0px;
     border-right: 0px;
     border-left: 0px;
-    border-color: $primary-color;
+    border-bottom: 0px;
   }
   .intl-tel-input {
     .flag-container {
-      bottom: 12px !important;
+      bottom: 0px !important;
     }
   }
 }

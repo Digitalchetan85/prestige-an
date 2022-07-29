@@ -8,7 +8,7 @@ import Image2 from "../../images/slider/meridian/image-2.png";
 import Image3 from "../../images/slider/meridian/image-3.png";
 import Image4 from "../../images/slider/meridian/image-4.png";
 import Logo from "../../images/projects/meridian-park-@-the-prestige-city-logo.png";
-import Modals from "../Includes/BrochureModals";
+import Modals from "../Includes/Modals";
 import DownloadBrochure from "../Includes/DownloadBrochure";
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 
@@ -143,7 +143,7 @@ const MeridianSlider = () => {
       <Modals
         show={show}
         handleClose={handleClose}
-        title="Download Brochure"
+        title="Download Pricesheet"
         message="Please Fill in your details & Download the Complete Brochure"
         projectid="57a99891-ec20-472a-b230-187e20fee71f"
       />

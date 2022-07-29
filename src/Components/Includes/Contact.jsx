@@ -6,12 +6,13 @@ import axios from "axios";
 // import CountryDropdown from "country-dropdown-with-flags-for-react";
 import "react-phone-number-input/style.css";
 // import PhoneInput from "react-phone-number-input";
-import IntlTelInput from 'react-intl-tel-input';
-import 'react-intl-tel-input/dist/main.css';
+import IntlTelInput from "react-intl-tel-input";
+import "react-intl-tel-input/dist/main.css";
+import ReactCountryFlag from "react-country-flag"
 
 const Contact = () => {
   const [formStatus, setformStatus] = useState("");
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(false);
   const initialValues = {
     name: "",
     email: "",
@@ -23,9 +24,9 @@ const Contact = () => {
 
   const validationSchema = Yup.object({
     name: Yup.string().required("Required"),
-    email: Yup.string().required("required").email("Invalid email format"),
+    email: Yup.string().required("Required").email("Invalid email format"),
     phone: Yup.string()
-      .required("required")
+      .required("Required")
       .matches(phoneRegExp, "Phone No is not valid")
       .min(10, "Phone No Minimum 10 Digits")
       .max(10, "Phone No Minimum 10 Digits"),
@@ -34,6 +35,7 @@ const Contact = () => {
   const onSubmit = (values) => {
     // console.log(values);
     // const data = "";
+    setValue(true);
 
     let data = {
       apikey: "897ec314-c85b-4291-96ee-48648d5dcfbd",
@@ -56,6 +58,7 @@ const Contact = () => {
           setformStatus(
             "Thanks for contacting us. We will get back to you soon."
           );
+          setValue(false);
         } else {
           setformStatus("Sorry!!! Something went wrong. Please try again");
         }
@@ -65,7 +68,7 @@ const Contact = () => {
       });
   };
   return (
-    <div className="sticky-top" id="contact">
+    <div className="sticky-top py-3">
       <Container>
         <Row className="justify-content-center">
           <Col md={12} className="px-0">
@@ -74,7 +77,7 @@ const Contact = () => {
               validationSchema={validationSchema}
               onSubmit={onSubmit}
             >
-              <Form className="py-2 rounded" style={{ height: "70vh" }}>
+              <Form className="py-2 rounded py-md-5 px-3" style={{ height: "70vh" }}>
                 {/* <h4 className="p-2 rounded text-center text-white bg-primary fs-5">Enquiry Now</h4> */}
                 <div className="text-center">
                   <Button className="btn btn-primary text-white">
@@ -82,14 +85,17 @@ const Contact = () => {
                   </Button>
                 </div>
                 <div className="text-center">
-                  <h5 className="text-center fs-6 py-3">
-                    Pre-Register here for Best Offers
+                  <h5 className="text-center text-white fs-5 py-3">
+                    Get in touch with us
                   </h5>
                 </div>
                 <Row className="mb-2">
                   <Col md={12}>
                     <div className="mb-2">
-                      <InputGroup className="mb-3" style={{ height: "50px" }}>
+                      <InputGroup
+                        className="mb-3 shadow rounded"
+                        style={{ height: "50px" }}
+                      >
                         <InputGroup.Text id="basic-addon1" className="bg-white">
                           <i className="fa fa-user text-primary"></i>
                         </InputGroup.Text>
@@ -112,7 +118,10 @@ const Contact = () => {
                 <Row className="mb-2">
                   <Col md={12}>
                     <div className="mb-2">
-                      <InputGroup className="mb-3" style={{ height: "50px" }}>
+                      <InputGroup
+                        className="mb-3 shadow rounded"
+                        style={{ height: "50px" }}
+                      >
                         <InputGroup.Text id="basic-addon1">
                           <i className="fa fa-envelope text-primary"></i>
                         </InputGroup.Text>
@@ -133,11 +142,20 @@ const Contact = () => {
                 <Row className="mb-2">
                   <Col md={12}>
                     <div className="mb-2">
-                      <InputGroup className="mb-3" style={{ height: "50px" }}>
+                      <InputGroup
+                        className="mb-3 shadow rounded"
+                        style={{ height: "50px" }}
+                      >
                         {/* <InputGroup.Text id="basic-addon1">
                           <i className="fa fa-phone-volume text-primary"></i>
-                        </InputGroup.Text>
-                        <Field
+                        </InputGroup.Text> */}
+                        <IntlTelInput
+                          preferredCountries={['in']}
+                          style={{ width: '100%' }}
+                          containerClassName="intl-tel-input"
+                          inputClassName="form-control"
+                        />
+                        {/* <Field
                           className="form-control"
                           type="tel"
                           aria-label="Username"
@@ -146,12 +164,6 @@ const Contact = () => {
                           name="phone"
                           placeholder="Phone"
                         /> */}
-                        <IntlTelInput
-                          preferredCountries={['in']}
-                          style={{ width: '100%' }}
-                          containerClassName="intl-tel-input"
-                          inputClassName="form-control"
-                        />
                       </InputGroup>
                     </div>
                   </Col>
@@ -166,6 +178,14 @@ const Contact = () => {
                         {formStatus}
                       </div>
                     ) : null}
+                    {value ? (
+                      <div
+                        class="text-center spinner-border text-success"
+                        role="status"
+                      >
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    ) : null}
                   </Col>
                 </Row>
                 <Row className="mb-3">
@@ -175,7 +195,7 @@ const Contact = () => {
                         className="btn btn-primary text-white px-5"
                         type="submit"
                       >
-                        <i className="fa fa-phone-volume text-white pe-2"></i> Request for Call back
+                        Pre-Register here
                       </Button>
                     </div>
                   </Col>

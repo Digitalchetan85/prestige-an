@@ -87,7 +87,7 @@ const MainSlider = () => {
   };
 
   return (
-    <div className="py-md-5">
+    <div className="">
       <OwlCarousel options={options}>
         {associations.map((item, index) => (
           <div className="mx-2" key={index}>
